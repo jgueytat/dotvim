@@ -1,25 +1,26 @@
 call pathogen#infect()
 
+" /Shortcut to find the defined shorcuts.
+" /Function to find the defined functions.
 
-" Some classicals "
+" I - Some classicals "
 "
 
-" Classical settings:
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 syntax on
 set number
-
-" Mappings without new function:
-nmap <c-s-h> <<
-nmap <c-s-l> >>
-vmap <c-s-h> <gv
-vmap <c-s-l> >gv
+set mouse=a
+colorscheme torte
 
 
-" Functions and mappings using it "
+" II - A little bit harder "
 "
 
-" Function to preserve the buffer state while executing a command:
+" Shortcut: %%
+" Directory of the current edited file.
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
+" Preserve the buffer state while executing a command:
 function! Preserve(command)
     " Save last search, and cursor position.
     let _s=@/
@@ -34,12 +35,17 @@ function! Preserve(command)
     call cursor(l, c)
 endfunction
 
-" Mapping based on the function Preserve():
+" Shortcut: _$
+" Delete all blanks at the end of lines.
 nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
+
+" Shortcut: _=
+" Indent the whole file.
 nmap _= :call Preserve("normal gg=G")<CR>
 
 
-" Funcion to set all tab settings at once:
+" Function: :Stab
+" Set all tab settings at once.
 command! -nargs=* Stab call Stab()
 function! Stab()
     let l:tabstop = 1 * input('set tabstop = softtabstop = shiftwidth = ')
@@ -48,27 +54,14 @@ function! Stab()
         let &l:softtabstop = l:tabstop
         let &l:shiftwidth = l:tabstop
     endif
-    call SummarizeTabs()
 endfunction
 
-function! SummarizeTabs()
-    try
-        echohl ModeMsg
-        echon 'tabstop='.&l:ts
-        echon ' shiftwidth='.&l:sw
-        echon ' softtabstop='.&l:sts
-        if &l:et
-            echon ' expandtab'
-        else
-            echon ' noexpandtab'
-        endif
-    finally
-        echohl None
-    endtry
-endfunction
 
+" III - Use autocommands
+"
 
 if has("autocmd")
+    autocmd bufwritepost .vimrc source $MYVIMRC
     filetype plugin indent on
 endif
 
