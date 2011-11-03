@@ -56,6 +56,11 @@ function! Stab()
     endif
 endfunction
 
+" Shortcut: ,v
+" Edit the .vimrc file.
+let mapleader = ","
+nmap <leader>v :tabedit $MYVIMRC<CR>
+
 
 " III - Use autocommands
 "
