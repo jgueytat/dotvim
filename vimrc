@@ -1,9 +1,9 @@
 call pathogen#infect()
 
-" /Shortcut to find the defined shorcuts.
+" /Shortcut to find the defined shortcuts.
 " /Function to find the defined functions.
 
-" I - Some classicals "
+" I - Some classics "
 "
 
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
@@ -62,7 +62,7 @@ let mapleader = ","
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
 
-" III - Use autocommands
+" III - Use autocmd
 "
 
 if has("autocmd")

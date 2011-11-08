@@ -7,3 +7,17 @@ Installation:
 
 Create symlinks:
     ln -s ~/.vim/vimrc ~/.vimrc
+
+VIM Readme:
+
+    Use :help cmd to know more about the cmd command.
+
+    :help text-object
+    :help q 
+    :help m
+    :help autocmd
+    :help pattern.txt
+    :help jump-motions
+    :help expand
+    :help visual-operators
+
