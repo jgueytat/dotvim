@@ -6,14 +6,15 @@ Installation:
     git submodule update
 
 Create symlinks:
+
     ln -s ~/.vim/vimrc ~/.vimrc
 
-VIM Readme:
 
-    Use :help cmd to know more about the cmd command.
+==================
 
-    :help text-object
-    :help q 
+Use :help cmd to know more about the "cmd" command.
+
+text-object, q 
     :help m
     :help autocmd
     :help pattern.txt
@@ -21,3 +22,4 @@ VIM Readme:
     :help expand
     :help visual-operators
 
+==================
