@@ -1,9 +1,19 @@
-call pathogen#infect()
-
 " /Shortcut to find the defined shortcuts.
 " /Function to find the defined functions.
 
-" I - Some classics "
+call pathogen#infect()
+
+
+" I - Use autocmd
+"
+
+if has("autocmd")
+    autocmd bufwritepost .vimrc source $MYVIMRC
+    filetype plugin indent on
+endif
+
+
+" II - Some classics "
 "
 
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
@@ -14,45 +24,38 @@ set hidden
 colorscheme torte
 
 
-" II - A little bit harder - Let's remember new function and shortcuts "
+" III - A little bit harder - Let's remember new function and shortcuts "
 "
 
-
 " !! The following shortcuts need the gundo plugin.
-if exists("loader_gundo") && exists(":GundoToggle")
-    " Shortcut: F5
-    " Open/Close the undo window.
-    nmap <F5> :GundoToggle<CR>
-endif
+" Shortcut: F5
+" Open/Close the undo window.
+nmap <F5> :GundoToggle<CR>
 
 
 " !! The following shortcuts need the unimpaired plugin.
-if exists("g:loaded_unimpaired") 
-    " Shortcut: ctr + up/down
-    " Move lines up and down
-    nmap <C-Up> [e
-    nmap <C-Down> ]e
-    vmap <C-Up> [egv
-    vmap <C-Down> ]egv
-endif
+" Shortcut: ctr + up/down
+" Move lines up and down
+nmap <C-Up> [e
+nmap <C-Down> ]e
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
 
 
 " !! The following shortcuts need the tabular plugin.
-if exists("g:tabular_loaded") && exists(":Tabularize")
-    let mapleader=','
-    "
-    " Shortcut: <leader>a=
-    " Align on = sign.
-    " The following one is on the whole file... Too hazardous!
-    " nmap <Leader>a= :Tabularize /= <CR>
-    vmap <Leader>a= :Tabularize /= <CR>
+let mapleader=','
+"
+" Shortcut: <leader>a=
+" Align on = sign.
+" The following one is on the whole file... Too hazardous!
+" nmap <Leader>a= :Tabularize /= <CR>
+vmap <Leader>a= :Tabularize /= <CR>
 
-    " Shortcut: <leader>a:
-    " Align after the : sign.
-    " The following one is on the whole file... Too hazardous!
-    " nmap <Leader>a: :Tabularize /:\zs<CR>
-    vmap <Leader>a: :Tabularize /:\zs<CR>
-endif
+" Shortcut: <leader>a:
+" Align after the : sign.
+" The following one is on the whole file... Too hazardous!
+" nmap <Leader>a: :Tabularize /:\zs<CR>
+vmap <Leader>a: :Tabularize /:\zs<CR>
 
 
 " Shortcut: %%
@@ -75,7 +78,7 @@ function! Preserve(command)
     call cursor(l, c)
 endfunction
 "
-let mapleader = "_"
+let mapleader = ","
 "
 " Shortcut: <leader>$
 " Delete all blanks at the end of lines.
@@ -97,13 +100,4 @@ function! Stab()
         let &l:shiftwidth  = l:tabstop
     endif
 endfunction
-
-
-" III - Use autocmd
-"
-
-if has("autocmd")
-    autocmd bufwritepost .vimrc source $MYVIMRC
-    filetype plugin indent on
-endif
 

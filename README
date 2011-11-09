@@ -12,14 +12,15 @@ Create symlinks:
 
 ==================
 
-Use :help cmd to know more about the "cmd" command.
+Use :help cmd to know more about the "cmd" command:
 
-text-object, q 
-    :help m
-    :help autocmd
-    :help pattern.txt
-    :help jump-motions
-    :help expand
-    :help visual-operators
+    - text-object :       use to specify text selection
+    - q :                 to register macros
+    - m :                 to mark to point of a file
+    - autocmd :           to use auto-commands
+    - pattern.txt :
+    - jump-motions :
+    - expand :
+    - visual-operators :
 
 ==================
