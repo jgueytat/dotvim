@@ -1,7 +1,7 @@
 " /Shortcut to find the defined shortcuts.
 " /Function to find the defined functions.
 
-call pathogen#infect()
+call pathogen#infect('plugins')
 
 
 " I - Use autocmd
@@ -21,7 +21,7 @@ syntax on
 set number
 set mouse=a
 set hidden
-colorscheme torte
+colorscheme default
 
 
 " III - A little bit harder - Let's remember new function and shortcuts "
