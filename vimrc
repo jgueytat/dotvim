@@ -17,6 +17,15 @@ colorscheme torte
 " II - A little bit harder - Let's remember new function and shortcuts "
 "
 
+
+" !! The following shortcuts need the gundo plugin.
+if exists("loader_gundo") && exists(":GundoToggle")
+    " Shortcut: F5
+    " Open/Close the undo window.
+    nmap <F5> :GundoToggle<CR>
+endif
+
+
 " !! The following shortcuts need the unimpaired plugin.
 if exists("g:loaded_unimpaired") 
     " Shortcut: ctr + up/down
