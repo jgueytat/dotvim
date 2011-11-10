@@ -12,6 +12,8 @@ if has("autocmd")
     filetype plugin indent on
 endif
 
+set omnifunc=syntaxcomplete#Complete
+
 
 " II - Some classics "
 "
@@ -22,6 +24,7 @@ set number
 set mouse=a
 set hidden
 colorscheme default
+set tags+=~/.vim/system-tags/$(hostname)
 
 
 " III - A little bit harder - Let's remember new function and shortcuts "
