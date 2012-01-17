@@ -1,0 +1,10 @@
+You may have one system-tags file per unix machine you use. 
+Note that those files are not under version control due to their size.
+
+If the file ~/.vim/system-tags/$(hostname) doesn't exist please generate one if you want to use system tags.
+
+You can use the following command:
+    ctags -R -f ~/.vim/system-tags/$(hostname) /usr/include /usr/local/include
+
+This command may take a while.
+

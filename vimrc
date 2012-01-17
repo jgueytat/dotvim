@@ -24,7 +24,8 @@ set number
 set mouse=a
 set hidden
 colorscheme default
-set tags+=~/.vim/system-tags/$(hostname)
+set tags+=~/.vim/tags/cpp
+set tags+=~/.vim/tags/Qt
 
 
 " III - A little bit harder - Let's remember new function and shortcuts "
