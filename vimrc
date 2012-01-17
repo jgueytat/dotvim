@@ -10,6 +10,7 @@ call pathogen#infect('plugins')
 if has("autocmd")
     autocmd bufwritepost .vimrc source $MYVIMRC
     filetype plugin indent on
+    autocmd BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
 endif
 
 set omnifunc=syntaxcomplete#Complete
