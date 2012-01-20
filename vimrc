@@ -25,6 +25,7 @@ set number
 set mouse=a
 set hidden
 colorscheme default
+
 set tags+=~/.vim/tags/cpp
 set tags+=~/.vim/tags/Qt
 
@@ -32,43 +33,15 @@ set tags+=~/.vim/tags/Qt
 " III - A little bit harder - Let's remember new function and shortcuts "
 "
 
-" !! The following shortcuts need the gundo plugin.
-" Shortcut: F5
-" Open/Close the undo window.
-nmap <F5> :GundoToggle<CR>
-
-
-" !! The following shortcuts need the unimpaired plugin.
-" Shortcut: ctr + up/down
-" Move lines up and down
-nmap <C-Up> [e
-nmap <C-Down> ]e
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
-
-
-" !! The following shortcuts need the tabular plugin.
-let mapleader=','
-"
-" Shortcut: <leader>a=
-" Align on = sign.
-" The following one is on the whole file... Too hazardous!
-" nmap <Leader>a= :Tabularize /= <CR>
-vmap <Leader>a= :Tabularize /= <CR>
-
-" Shortcut: <leader>a:
-" Align after the : sign.
-" The following one is on the whole file... Too hazardous!
-" nmap <Leader>a: :Tabularize /:\zs<CR>
-vmap <Leader>a: :Tabularize /:\zs<CR>
-
-
+" No plugin needed :
+" {
+" Directory of the current edited file :
 " Shortcut: %%
-" Directory of the current edited file.
+
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
 
-" Preserve the buffer state while executing a command:
+" Preserve the buffer state while executing a command :
 function! Preserve(command)
     " Save last search, and cursor position.
     let _s = @/
@@ -82,20 +55,23 @@ function! Preserve(command)
     let @/=_s
     call cursor(l, c)
 endfunction
-"
+
 let mapleader = ","
-"
+
+" Delete all blanks at the end of lines :
 " Shortcut: <leader>$
-" Delete all blanks at the end of lines.
+
 nmap <leader>$ :call Preserve("%s/\\s\\+$//e")<CR>
-"
+
+" Indent the whole file :
 " Shortcut: <leader>=
-" Indent the whole file.
+
 nmap <leader>= :call Preserve("normal gg=G")<CR>
 
 
+" Set all tab settings at once :
 " Function: :Stab
-" Set all tab settings at once.
+
 command! -nargs=* Stab call Stab()
 function! Stab()
     let l:tabstop = 1 * input('set tabstop = softtabstop = shiftwidth = ')
@@ -105,4 +81,39 @@ function! Stab()
         let &l:shiftwidth  = l:tabstop
     endif
 endfunction
+" }
+
+" !! The following shortcuts need the gundo plugin :
+" {
+    " Open/Close the undo window :
+    " Shortcut: F5
+    
+    nmap <F5> :GundoToggle<CR>
+" }
+
+" !! The following shortcuts need the unimpaired plugin :
+" {
+    " Move lines up and down :
+    " Shortcut: ctr + up/down
+    
+    nmap <C-Up> [e
+    nmap <C-Down> ]e
+    vmap <C-Up> [egv
+    vmap <C-Down> ]egv
+" }
+
+" !! The following shortcuts need the tabular plugin :
+" {
+    let mapleader=','
+    
+    " Align on = sign :
+    " Shortcut: <leader>a=
+    
+    vmap <Leader>a= :Tabularize /= <CR>
+    
+    " Align on : sign :
+    " Shortcut: <leader>a:
+    
+    vmap <Leader>a: :Tabularize /:\zs<CR>
+" }
 
