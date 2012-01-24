@@ -8,12 +8,11 @@ call pathogen#infect('plugins')
 "
 
 if has("autocmd")
-    autocmd bufwritepost .vimrc source $MYVIMRC
     filetype plugin indent on
+    autocmd BufWritePost .vimrc source $MYVIMRC
     autocmd BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
 endif
 
-set omnifunc=syntaxcomplete#Complete
 
 
 " II - Some classics "
@@ -25,9 +24,11 @@ set number
 set mouse=a
 set hidden
 colorscheme default
-
+set omnifunc=syntaxcomplete#Complete
 set tags+=~/.vim/tags/cpp
 set tags+=~/.vim/tags/Qt
+set foldmethod=syntax
+
 
 
 " III - A little bit harder - Let's remember new function and shortcuts "
@@ -35,6 +36,11 @@ set tags+=~/.vim/tags/Qt
 
 " No plugin needed :
 " {
+
+" :help :mksession
+" :nmap <F2> :wa<Bar>exe "mksession! " . v:this_session<CR>:so ~/sessions/
+
+
 " Directory of the current edited file :
 " Shortcut: %%
 
