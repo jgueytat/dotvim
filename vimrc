@@ -18,6 +18,7 @@ endif
 " II - Some classics "
 "
 
+set nocompatible
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 syntax on
 set number
@@ -39,6 +40,9 @@ set foldmethod=syntax
 
 " :help :mksession
 " :nmap <F2> :wa<Bar>exe "mksession! " . v:this_session<CR>:so ~/sessions/
+" map <C-F12> :!ctags -R -I --languages=c++ --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+" 
+
 
 
 " Directory of the current edited file :
