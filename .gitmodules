@@ -13,3 +13,6 @@
 [submodule "plugins/omnicppcomplete"]
 	path = plugins/omnicppcomplete
 	url = https://github.com/vim-scripts/OmniCppComplete.git
+[submodule "plugins/surround"]
+	path = plugins/surround
+	url = https://github.com/tpope/vim-surround.git
