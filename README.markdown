@@ -41,5 +41,5 @@
 
 *[visual.txt](http://vimdoc.sourceforge.net/htmldoc/visual.html "Vim documentation: visual")*
 
-- [visual-operators](http://vimdoc.sourceforge.net/htmldoc/visual.html#visual-operators) : ...
+- [visual-operators](http://vimdoc.sourceforge.net/htmldoc/visual.html#visual-operators) : operators available in Visual mode
 
