@@ -21,9 +21,13 @@
 ### Update
 
 > cd ~/.vim
->
+
+*Pull the Github repository:*
+
 > git pull origin master
->
+
+*Update all plugins:*
+
 > git submodule update
 
 ### Help
