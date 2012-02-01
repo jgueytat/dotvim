@@ -30,16 +30,16 @@
 
 *Use **:help cmd** to know more about the "cmd" command:*
 
-*Motions*
+*[Motion](http://vimdoc.sourceforge.net/htmldoc/motion.html)*
 
 - [text-obect](http://vimdoc.sourceforge.net/htmldoc/motion.html#text-objects): use to specify text selection
 - [m](http://vimdoc.sourceforge.net/htmldoc/motion.html#mark): to mark to point of a file
 
-*Repeat*
+*[Repeat](http://vimdoc.sourceforge.net/htmldoc/repeat.html)*
 
 - [q](http://vimdoc.sourceforge.net/htmldoc/repeat.html#complex-repeat): to register macros
 
-*Visual*
+*[Visual](http://vimdoc.sourceforge.net/htmldoc/visual.html)*
 
 - [visual-operators](http://vimdoc.sourceforge.net/htmldoc/visual.html#visual-operators) : ...
 
