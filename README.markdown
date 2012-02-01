@@ -30,7 +30,7 @@ Update
 
 *Update all plugins:*
 
-> git submodule update
+> git submodule foreach git pull origin master
 
 Learn more
 ==========
