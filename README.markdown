@@ -1,16 +1,20 @@
 Installation:
+============
 
-git clone git://github.com/jgueytat/dotvim.git ~/.vim
-cd ~/.vim
-git submodule init
-git submodule update
+*Get a copy:*
+> git clone git://github.com/jgueytat/dotvim.git ~/.vim
 
-Create symlinks:
+*Update plugins to their latest version:*
+> cd ~/.vim
+> git submodule init
+> git submodule update
 
-ln -s ~/.vim/vimrc ~/.vimrc
+*Create symlinks:*
+> mv ~/.vimrc ~/vimrc.original
+> ln -s ~/.vim/vimrc ~/.vimrc
 
 
-==================
+
 
 Use :help cmd to know more about the "cmd" command:
 
@@ -23,4 +27,3 @@ Use :help cmd to know more about the "cmd" command:
 - expand :
 - visual-operators :
 
-==================
