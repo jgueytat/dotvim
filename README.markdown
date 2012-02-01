@@ -14,7 +14,7 @@ ln -s ~/.vim/vimrc ~/.vimrc
 
 Use :help cmd to know more about the "cmd" command:
 
-- text-object :       use to specify text selection
+- [text-obect](http://vimdoc.sourceforge.net/htmldoc/motion.html#text-objects): use to specify text selection
 - q :                 to register macros
 - m :                 to mark to point of a file
 - autocmd :           to use auto-commands
