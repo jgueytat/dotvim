@@ -26,11 +26,7 @@ Help
 ### Use :help cmd to know more about the "cmd" command:
 
 - [text-obect](http://vimdoc.sourceforge.net/htmldoc/motion.html#text-objects): use to specify text selection
-- [q](http://vimdoc.sourceforge.net/htmldoc/repeat.html#complex-repeat):                 to register macros
-- m :                 to mark to point of a file
-- autocmd :           to use auto-commands
-- pattern.txt :
-- jump-motions :
-- expand :
-- visual-operators :
+- [q](http://vimdoc.sourceforge.net/htmldoc/repeat.html#complex-repeat): to register macros
+- [m](http://vimdoc.sourceforge.net/htmldoc/motion.html#mark): to mark to point of a file
+- [visual-operators](http://vimdoc.sourceforge.net/htmldoc/visual.html#visual-operators) : ...
 
