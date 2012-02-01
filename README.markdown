@@ -18,6 +18,12 @@
 >
 > ln -s ~/.vim/vimrc ~/.vimrc
 
+### Update
+
+> cd ~/.vim
+>
+> git submodule update
+
 ### Help
 
 *Use **:help cmd** to know more about the "cmd" command:*
