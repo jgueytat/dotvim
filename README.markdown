@@ -19,7 +19,8 @@ Installation
 >
 > ln -s ~/.vim/vimrc ~/.vimrc
 
-### TITI
+TITI
+----
 
 *Use :help cmd to know more about the "cmd" command:*
 
