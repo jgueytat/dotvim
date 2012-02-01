@@ -1,11 +1,11 @@
 Installation
 ------------
 
-**Get a copy:**
+*Get a copy:*
 
 > git clone git://github.com/jgueytat/dotvim.git ~/.vim
 
-**Update plugins to their latest version:**
+*Update plugins to their latest version:*
 
 > cd ~/.vim
 >
@@ -13,16 +13,17 @@ Installation
 >
 > git submodule update
 
-**Create symlinks:**
+*Create symlinks:*
 
 > mv ~/.vimrc ~/vimrc.original
 >
 > ln -s ~/.vim/vimrc ~/.vimrc
 
 
+Help
+----
 
-
-Use :help cmd to know more about the "cmd" command:
+### Use :help cmd to know more about the "cmd" command:
 
 - [text-obect](http://vimdoc.sourceforge.net/htmldoc/motion.html#text-objects): use to specify text selection
 - q :                 to register macros
