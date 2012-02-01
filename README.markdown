@@ -3,9 +3,7 @@ Installation
 
 **Get a copy:**
 
-> git clone git://github.com/jgueytat/dot
-> 
-> vim.git ~/.vim
+> git clone git://github.com/jgueytat/dotvim.git ~/.vim
 
 **Update plugins to their latest version:**
 
