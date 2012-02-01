@@ -46,7 +46,7 @@ In Vim type **:help cmd** to know more about the "cmd" command.
 [motion.txt](http://vimdoc.sourceforge.net/htmldoc/motion.html "Vim documentation: motion")
 
 - [text-obect](http://vimdoc.sourceforge.net/htmldoc/motion.html#text-objects): use to specify text selection
-- [m](http://vimdoc.sourceforge.net/htmldoc/motion.html#mark): to mark to point of a file
+- [m](http://vimdoc.sourceforge.net/htmldoc/motion.html#mark): to mark a point in a file
 
 [repeat.txt](http://vimdoc.sourceforge.net/htmldoc/repeat.html "Vim documentation: repeat")
 
