@@ -3,17 +3,22 @@ Installation
 
 **Get a copy:**
 
-> git clone git://github.com/jgueytat/dotvim.git ~/.vim
+> git clone git://github.com/jgueytat/dot
+> 
+> vim.git ~/.vim
 
 **Update plugins to their latest version:**
 
 > cd ~/.vim
+>
 > git submodule init
+>
 > git submodule update
 
 **Create symlinks:**
 
 > mv ~/.vimrc ~/vimrc.original
+>
 > ln -s ~/.vim/vimrc ~/.vimrc
 
 
