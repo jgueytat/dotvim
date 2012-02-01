@@ -1,3 +1,6 @@
+README
+======
+
 Installation
 ------------
 
@@ -24,7 +27,7 @@ Update
 
 > cd ~/.vim
 
-*Pull the Github repository:*
+*Update your copy:*
 
 > git pull origin master
 
