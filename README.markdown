@@ -43,8 +43,6 @@ Go through this tutorial. This is the only place to begin with Vim.
 
 In Vim type **:help cmd** to know more about the "cmd" command.
 
-*Some wonderful commands to learn...*
-
 [motion.txt](http://vimdoc.sourceforge.net/htmldoc/motion.html "Vim documentation: motion")
 
 - [text-obect](http://vimdoc.sourceforge.net/htmldoc/motion.html#text-objects): use to specify text selection
