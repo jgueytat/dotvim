@@ -23,7 +23,7 @@ Installation
 Help
 ----
 
-### Use :help cmd to know more about the "cmd" command:
+**Use :help cmd to know more about the "cmd" command:**
 
 - [text-obect](http://vimdoc.sourceforge.net/htmldoc/motion.html#text-objects): use to specify text selection
 - [q](http://vimdoc.sourceforge.net/htmldoc/repeat.html#complex-repeat): to register macros
