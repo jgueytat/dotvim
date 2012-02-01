@@ -1,8 +1,5 @@
-README
-======
-
 Installation
-------------
+============
 
 *Get a copy:*
 
@@ -23,7 +20,7 @@ Installation
 > ln -s ~/.vim/vimrc ~/.vimrc
 
 Update
-------
+======
 
 > cd ~/.vim
 
@@ -36,7 +33,7 @@ Update
 > git submodule update
 
 Learn more
-----------
+==========
 
 ### :help cmd
 
