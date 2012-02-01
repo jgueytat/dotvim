@@ -1,4 +1,5 @@
-### Installation
+Installation
+------------
 
 *Get a copy:*
 
@@ -18,7 +19,8 @@
 >
 > ln -s ~/.vim/vimrc ~/.vimrc
 
-### Update
+Update
+------
 
 > cd ~/.vim
 
@@ -30,7 +32,10 @@
 
 > git submodule update
 
-### Help
+Learn more
+----------
+
+### :help cmd
 
 *Use **:help cmd** to know more about the "cmd" command:*
 
@@ -46,4 +51,6 @@
 *[visual.txt](http://vimdoc.sourceforge.net/htmldoc/visual.html "Vim documentation: visual")*
 
 - [visual-operators](http://vimdoc.sourceforge.net/htmldoc/visual.html#visual-operators) : operators available in Visual mode
+
+### Useful Links
 
