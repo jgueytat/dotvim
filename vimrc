@@ -26,8 +26,8 @@ set mouse=a
 set hidden
 colorscheme default
 set omnifunc=syntaxcomplete#Complete
-set tags+=~/.vim/tags/cpp
-set tags+=~/.vim/tags/Qt
+set tags+=~/.vim/tags/cpp.tags
+set tags+=~/.vim/tags/Qt.tags
 set foldmethod=syntax
 
 
