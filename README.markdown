@@ -5,7 +5,7 @@ Installation
 
 > git clone git://github.com/jgueytat/dotvim.git ~/.vim
 
-*Update plugins to their latest version:*
+*Get the plugins:*
 
 > cd ~/.vim
 >
@@ -15,8 +15,6 @@ Installation
 
 *Create symlinks:*
 
-> mv ~/.vimrc ~/vimrc.original
->
 > ln -s ~/.vim/vimrc ~/.vimrc
 
 Update
@@ -30,6 +28,10 @@ Update
 
 *Update all plugins:*
 
+> git submodule init 
+> 
+> git submodule update
+> 
 > git submodule foreach git pull origin master
 
 Learn more
