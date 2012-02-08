@@ -20,10 +20,10 @@ Installation
 Update
 ======
 
-> cd ~/.vim
-
 *Update your copy:*
 
+> cd ~/.vim
+>
 > git pull origin master
 
 *Update all plugins:*
