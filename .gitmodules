@@ -4,9 +4,6 @@
 [submodule "plugins/gundo"]
 	path = plugins/gundo
 	url = http://github.com/sjl/gundo.vim.git
-[submodule "plugins/omnicppcomplete"]
-	path = plugins/omnicppcomplete
-	url = https://github.com/vim-scripts/OmniCppComplete.git
 [submodule "plugins/surround"]
 	path = plugins/surround
 	url = https://github.com/tpope/vim-surround.git
@@ -16,3 +13,6 @@
 [submodule "plugins/pathogen"]
 	path = plugins/pathogen
 	url = https://github.com/tpope/vim-pathogen
+[submodule "plugins/OmniCppComplete"]
+	path = plugins/OmniCppComplete
+	url = https://github.com/vim-scripts/OmniCppComplete
