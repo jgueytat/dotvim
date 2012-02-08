@@ -2,6 +2,7 @@ Plugins' list:
 ==============
 
  - OmniCppComplete:
- - tabular:
  - fugitive:
- - toto:
+ - gundo:
+ - pathogen:
+ - tabular:
