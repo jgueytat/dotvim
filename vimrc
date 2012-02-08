@@ -1,6 +1,7 @@
 " /Shortcut to find the defined shortcuts.
 " /Function to find the defined functions.
 
+runtime plugins/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect('plugins')
 
 

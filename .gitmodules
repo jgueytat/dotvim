@@ -19,3 +19,9 @@
 [submodule "plugins/supertab"]
 	path = plugins/supertab
 	url = https://github.com/ervandew/supertab.git
+[submodule "vim-pathogen"]
+	path = vim-pathogen
+	url = https://github.com/tpope/vim-pathogen
+[submodule "plugins/vim-pathogen"]
+	path = plugins/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen
