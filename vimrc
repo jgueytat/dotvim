@@ -127,3 +127,8 @@ endfunction
     vmap <Leader>a: :Tabularize /:\zs<CR>
 " }
 
+" !! The following shortcuts need the supertab plugin :
+" {
+    let g:SuperTabDefaultCompletionType = "context"
+" }
+
