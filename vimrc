@@ -104,28 +104,13 @@ endfunction
 
 " !! The following shortcuts need the unimpaired plugin :
 " {
-    " Move lines up and down :
-    " Shortcut: ctr + up/down
-    
-    nmap <C-Up> [e
-    nmap <C-Down> ]e
-    vmap <C-Up> [egv
-    vmap <C-Down> ]egv
-" }
-
-" !! The following shortcuts need the tabular plugin :
-" {
-    let mapleader=','
-    
-    " Align on = sign :
-    " Shortcut: <leader>a=
-    
-    vmap <Leader>a= :Tabularize /= <CR>
-    
-    " Align on : sign :
-    " Shortcut: <leader>a:
-    
-    vmap <Leader>a: :Tabularize /:\zs<CR>
+"   " Move lines up and down :
+"   " Shortcut: ctr + up/down
+"   
+"   nmap <C-Up> [e
+"   nmap <C-Down> ]e
+"   vmap <C-Up> [egv
+"   vmap <C-Down> ]egv
 " }
 
 " !! The following shortcuts need the supertab plugin :
