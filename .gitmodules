@@ -4,9 +4,6 @@
 [submodule "plugins/gundo"]
 	path = plugins/gundo
 	url = http://github.com/sjl/gundo.vim.git
-[submodule "plugins/surround"]
-	path = plugins/surround
-	url = https://github.com/tpope/vim-surround.git
 [submodule "plugins/supertab"]
 	path = plugins/supertab
 	url = https://github.com/ervandew/supertab.git
@@ -16,9 +13,9 @@
 [submodule "plugins/OmniCppComplete"]
 	path = plugins/OmniCppComplete
 	url = https://github.com/vim-scripts/OmniCppComplete
-[submodule "plugins/minibufexpl"]
-	path = plugins/minibufexpl
-	url = https://github.com/fholgado/minibufexpl.vim.git
-[submodule "plugins/vim-session"]
-	path = plugins/vim-session
+[submodule "plugins/easytags"]
+	path = plugins/easytags
+	url = https://github.com/xolox/vim-easytags.git
+[submodule "plugins/session"]
+	path = plugins/session
 	url = https://github.com/xolox/vim-session.git

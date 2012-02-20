@@ -1,11 +1,11 @@
 Plugins' list:
 ==============
 
- - **OmniCppComplete:**  add cpp completion
- - **fugitive:**         easy git
- - **gundo:**            easy undo
+ - **OmniCppComplete:**  add C++ auto-completion
+ - **fugitive:**         use Git inside Vim
+ - **gundo:**            add powerful undo capacity by pressing F5
  - **pathogen:**         handle submodule plugins
- - **supertab:**         easy completion
- - **surround:**         easy tags 
- - **minibufexpl:**      enhance tab display
- - **vim-session:**      handle sessions
+ - **supertab:**         switch between completion functions
+ - **session:**          handle sessions
+ - **easytags:**         handle tags
+

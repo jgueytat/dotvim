@@ -34,6 +34,12 @@ Update
 > 
 > git submodule foreach git pull origin master
 
+Remove a plugin
+============
+
+Remove the corresponding lines in the file .gitmodules
+Remove the plugin
+
 Learn more
 ==========
 

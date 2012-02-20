@@ -1,5 +1,0 @@
-Each directory here represents a project with its own configuration files.
-
-tags:     Use it to store the tags related to this project.
-session:  Use it to restore a session. Buffers windows and tab pages will be restored.
-

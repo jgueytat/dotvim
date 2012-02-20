@@ -129,11 +129,10 @@
     set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 " }
 
-" !! Minibufexpl plugin:
+" !! Session plugin:
 " {
-    let g:miniBufExplMapWindowNavVim = 1 
-    let g:miniBufExplMapWindowNavArrows = 1 
-    let g:miniBufExplMapCTabSwitchBufs = 1 
-    let g:miniBufExplModSelTarget = 1 
+    let g:session_autoload = 'yes'
+    let g:session_autosave = 'yes'
+    let g:session_default_to_last = 1
 " }
 
