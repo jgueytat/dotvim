@@ -34,8 +34,15 @@ Update
 > 
 > git submodule foreach git pull origin master
 
-Remove a plugin
+Add a plugin
 ============
+
+> cd ~/.vim
+>
+> git submodule add GIT_URL_REPOSITORY plugins/PLUGIN_NAME
+
+Remove a plugin
+===============
 
 *In the .gitmodules file:*
 
