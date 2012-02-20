@@ -27,7 +27,7 @@
         set mouse=a
         set hidden
         colorscheme torte
-        set tags+=~/.vim/tags/cpp.tags
+        set tags+=~/.vim/tags/STL.tags
         set tags+=~/.vim/tags/Qt.tags
         setlocal omnifunc=syntaxcomplete#Complete
     " }
@@ -136,3 +136,10 @@
     let g:session_default_to_last = 1
 " }
 
+" !! Easytags plugin:
+" {
+    set tags+=./tags
+    let g:easytags_file = '~/.vim/tags/tags'
+    let g:easytags_dynamic_files = 1
+" }
+"
