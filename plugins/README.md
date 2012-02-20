@@ -8,3 +8,4 @@ Plugins' list:
  - **supertab:**         easy completion
  - **surround:**         easy tags 
  - **minibufexpl:**      enhance tab display
+ - **vim-session:**      handle sessions

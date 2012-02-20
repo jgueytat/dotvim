@@ -19,3 +19,6 @@
 [submodule "plugins/minibufexpl"]
 	path = plugins/minibufexpl
 	url = https://github.com/fholgado/minibufexpl.vim.git
+[submodule "plugins/vim-session"]
+	path = plugins/vim-session
+	url = https://github.com/xolox/vim-session.git

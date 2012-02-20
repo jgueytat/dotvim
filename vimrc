@@ -35,7 +35,7 @@
     " Shortcuts and Functions
     " {
         " :help :mksession
-        " :nmap <F2> :wa<Bar>exe "mksession! " . v:this_session<CR>:so ~/sessions/
+        nmap <F2> :wa<Bar>exe "mksession! " . v:this_session<CR>
         " map <C-F12> :!ctags -R -I --languages=c++ --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
         
         
@@ -127,5 +127,13 @@
     endif
 
     set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+" }
+
+" !! Minibufexpl plugin:
+" {
+    let g:miniBufExplMapWindowNavVim = 1 
+    let g:miniBufExplMapWindowNavArrows = 1 
+    let g:miniBufExplMapCTabSwitchBufs = 1 
+    let g:miniBufExplModSelTarget = 1 
 " }
 
