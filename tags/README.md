@@ -16,5 +16,5 @@ This command may take a while.
 
 **Library tags**
 
- - **Qt.tags**
- - **cpp.tags**
+ - **Qt.tags:** Qt library
+ - **cpp.tags:** STL library
