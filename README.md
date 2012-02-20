@@ -37,8 +37,8 @@ Update
 Remove a plugin
 ============
 
-Remove the corresponding lines in the file .gitmodules
-Remove the plugin
+ - Remove the corresponding lines in the file .gitmodules.
+ - Remove the plugin.
 
 Learn more
 ==========
