@@ -37,8 +37,12 @@ Update
 Remove a plugin
 ============
 
- 1. Remove the corresponding lines in the file .gitmodules.
- 2. Remove the plugin.
+*Remove the corresponding lines in the file **.gitmodules**.*
+
+*Remove the plugin:*
+
+> grr
+
 
 Learn more
 ==========
