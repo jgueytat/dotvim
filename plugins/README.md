@@ -7,3 +7,4 @@ Plugins' list:
  - **pathogen:**         handle submodule plugins
  - **supertab:**         easy completion
  - **surround:**         easy tags 
+ - **minibufexpl:**      enhance tab display
