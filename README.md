@@ -37,11 +37,11 @@ Update
 Remove a plugin
 ============
 
-*In the **.gitmodules** file:*
+*In the .gitmodules file:*
 
 > cat ~/.vim/.gitmodules | grep -v PLUGIN_NAME > ~/.vim/.gitmodules
 
-*Remove the plugin:*
+*Remove the plugin files:*
 
 > git rm -rf ~/.vim/plugins/PLUGIN_NAME
 
