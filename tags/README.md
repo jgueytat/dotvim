@@ -3,7 +3,7 @@ Tags
 
 **System tags**
 
-You may have one *system-$(hostname).tags* file per operating system you use. 
+You may have one **system-$(hostname).tags** file per operating system you use. 
 Note that those files are huge. They have to be ignored.
 
 If the file ~/.vim/tags/system-$(hostname).tags doesn't exist please generate one if you want to use system tags.
