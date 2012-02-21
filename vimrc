@@ -10,27 +10,49 @@
     " Autocommands {{{
         if has("autocmd")
             filetype plugin indent on
-            autocmd BufWritePost .vimrc source $MYVIMRC
         endif
     " }}}
     
     " Settings {{{
         set nocompatible
+
+        " Highlight search
         set hlsearch
+
+        " Setup tabs
         set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+
+        " Get colors
         syntax on
+        colorscheme torte
+
+        " Get line numbers
         set number
+
+        " Enable the mouse
         set mouse=a
+
+        " Switch buffer without saving
         set hidden
+        
+        " Folding method
         set foldmethod=indent
+
+        " Enhance display
+        set wildmenu
+
+        " Tags
+        set tags=tags;/
         set tags+=~/.vim/tags/STL.tags
         set tags+=~/.vim/tags/Qt.tags
-        colorscheme torte
+        
         setlocal omnifunc=syntaxcomplete#Complete
     " }}}
     
     " Shortcuts and Functions {{{
-        " map <C-F12> :!ctags -R -I --languages=c++ --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+        " Launch tags generation
+
+        map <C-F12> :!ctags -R --c++-kinds=+pl --fields=+iaS --extra=+q -f tags .<CR>
         
         
         " Preserve the buffer state while executing a command :
@@ -78,36 +100,11 @@
 " }}}
 
 " ++ Gundo plugin : {{{
-    " Open/Close the undo window :
-    " Shortcut: F5
-    
     nmap <F5> :GundoToggle<CR>
 " }}}
 
-" -- Unimpaired plugin : {{{
-"   " Move lines up and down :
-"   " Shortcut: ctr + up/down
-"   
-"   nmap <C-Up> [e
-"   nmap <C-Down> ]e
-"   vmap <C-Up> [egv
-"   vmap <C-Down> ]egv
-" }}}
-
-" ++ Supertab plugin : {{{
-    " Run the command :SuperTabHelp to switch to another completion method
-    " Shortcut: F6
-
-    nmap <F6> :SuperTabHelp<CR>
-
-    " Set up the default completion method
+" ++ Supertab plugin: {{{
     let g:SuperTabDefaultCompletionType = "context"
-" }}}
-
-" ++ OmniCppComplete plugin: {{{
-    if has("autocmd")
-        autocmd BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
-    endif
 " }}}
 
 " ++ Fugitive plugin: {{{
@@ -119,8 +116,11 @@
 " }}}
 
 " ++ Session plugin: {{{
-    let g:session_autoload = 'yes'
+    let g:session_autoload = 'no'
     let g:session_autosave = 'yes'
-    let g:session_default_to_last = 1
+" }}}
+
+" ++ Taglist plugin : {{{
+    nmap <F6> :TlistToggle<CR>
 " }}}
 

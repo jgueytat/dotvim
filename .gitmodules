@@ -16,3 +16,6 @@
 [submodule "plugins/session"]
 	path = plugins/session
 	url = https://github.com/xolox/vim-session.git
+[submodule "plugins/taglist"]
+	path = plugins/taglist
+	url = https://github.com/vim-scripts/taglist.vim.git

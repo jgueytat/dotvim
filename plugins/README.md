@@ -5,7 +5,7 @@ Plugins' list:
  - **fugitive:**         use Git inside Vim
  - **gundo:**            add powerful undo capacity by pressing F5
  - **pathogen:**         handle submodule plugins
- - **supertab:**         switch between completion functions
- - **session:**          handle sessions
- - **easytags:**         handle tags
+ - **supertab:**         improve completion by pressing TAB
+ - **session:**          add :OpenSession and :SaveSession functionalities
+ - **taglist:**          display nicely the tags of a file
 
