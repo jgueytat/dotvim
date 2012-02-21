@@ -16,3 +16,6 @@
 [submodule "plugins/taglist"]
 	path = plugins/taglist
 	url = https://github.com/vim-scripts/taglist.vim.git
+[submodule "plugins/supertab"]
+	path = plugins/supertab
+	url = https://github.com/ervandew/supertab.git
