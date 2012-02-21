@@ -7,5 +7,5 @@ Plugins' list:
  - **pathogen:**         handle submodule plugins
  - **supertab:**         improve completion by pressing TAB
  - **session:**          add :OpenSession and :SaveSession functionalities
- - **taglist:**          display nicely the tags of a file
+ - **taglist:**          display nicely the tags of a file by pressing F6
 
