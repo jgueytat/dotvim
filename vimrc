@@ -53,40 +53,13 @@
         " Personal shortcuts will begin with the mapleader key
         let mapleader = ";"
 
-
-        " Launch tags generation
+        " Launch tags generation :
         " Shortcut: Ctr + F12
         nmap <C-F12> :!ctags -R --c++-kinds=+pl --fields=+iaS --extra=+q -f tags .<CR>
-
 
         " Edit a file in the same directory of the current file edited :
         " Shortcut: <leader>e
         nmap <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
-
-        
-        " Preserve the buffer state while executing a command :
-        function! Preserve(command)
-            " Save last search, and cursor position.
-            let _s = @/
-            let l  = line(".")
-            let c  = col(".")
-        
-            " Execute the command.
-            execute a:command
-        
-            " Restore previous search history, and cursor position.
-            let @/=_s
-            call cursor(l, c)
-        endfunction
-        
-        " Delete all blanks at the end of lines :
-        " Shortcut: <leader>$
-        nmap <leader>$ :call Preserve("%s/\\s\\+$//e")<CR>
-
-        " Indent the whole file :
-        " Shortcut: <leader>=
-        nmap <leader>= :call Preserve("normal gg=G")<CR>
-        
         
         " Set all tab settings at once :
         " Function: :Stab
