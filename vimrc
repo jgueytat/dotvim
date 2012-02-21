@@ -1,24 +1,20 @@
 " /Shortcut to find the defined shortcuts.
 " /Function to find the defined functions.
 
-" !! Pathogen plugin:
-" {
+" ++ Pathogen plugin: {{{
     runtime plugins/pathogen/autoload/pathogen.vim
     call pathogen#infect('plugins')
-" }
+" }}}
 
-" Basics :
-" {
-    " Autocommands
-    " {
+" Basics : {{{
+    " Autocommands {{{
         if has("autocmd")
             filetype plugin indent on
             autocmd BufWritePost .vimrc source $MYVIMRC
         endif
-    " }
+    " }}}
     
-    " Settings
-    " {
+    " Settings {{{
         set nocompatible
         set hlsearch
         set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
@@ -26,16 +22,14 @@
         set number
         set mouse=a
         set hidden
-        colorscheme torte
+        set foldmethod=indent
         set tags+=~/.vim/tags/STL.tags
         set tags+=~/.vim/tags/Qt.tags
+        colorscheme torte
         setlocal omnifunc=syntaxcomplete#Complete
-    " }
+    " }}}
     
-    " Shortcuts and Functions
-    " {
-        " :help :mksession
-        nmap <F2> :wa<Bar>exe "mksession! " . v:this_session<CR>
+    " Shortcuts and Functions {{{
         " map <C-F12> :!ctags -R -I --languages=c++ --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
         
         
@@ -80,19 +74,17 @@
                 let &l:shiftwidth  = l:tabstop
             endif
         endfunction
-    " }
-" }
+    " }}}
+" }}}
 
-" !! Gundo plugin :
-" {
+" ++ Gundo plugin : {{{
     " Open/Close the undo window :
     " Shortcut: F5
     
     nmap <F5> :GundoToggle<CR>
-" }
+" }}}
 
-" !! Unimpaired plugin :
-" {
+" -- Unimpaired plugin : {{{
 "   " Move lines up and down :
 "   " Shortcut: ctr + up/down
 "   
@@ -100,10 +92,9 @@
 "   nmap <C-Down> ]e
 "   vmap <C-Up> [egv
 "   vmap <C-Down> ]egv
-" }
+" }}}
 
-" !! Supertab plugin :
-" {
+" ++ Supertab plugin : {{{
     " Run the command :SuperTabHelp to switch to another completion method
     " Shortcut: F6
 
@@ -111,35 +102,25 @@
 
     " Set up the default completion method
     let g:SuperTabDefaultCompletionType = "context"
-" }
+" }}}
 
-" !! OmniCppComplete plugin:
-" {
+" ++ OmniCppComplete plugin: {{{
     if has("autocmd")
         autocmd BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
     endif
-" }
+" }}}
 
-" !! Fugitive plugin:
-" {
+" ++ Fugitive plugin: {{{
     if has("autocmd")
         autocmd BufReadPost fugitive://* set bufhidden=delete
     endif
 
     set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-" }
+" }}}
 
-" !! Session plugin:
-" {
+" ++ Session plugin: {{{
     let g:session_autoload = 'yes'
     let g:session_autosave = 'yes'
     let g:session_default_to_last = 1
-" }
+" }}}
 
-" !! Easytags plugin:
-" {
-    set tags+=./tags
-    let g:easytags_file = '~/.vim/tags/tags'
-    let g:easytags_dynamic_files = 1
-" }
-"
