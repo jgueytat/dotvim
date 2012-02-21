@@ -4,9 +4,6 @@
 [submodule "plugins/gundo"]
 	path = plugins/gundo
 	url = http://github.com/sjl/gundo.vim.git
-[submodule "plugins/supertab"]
-	path = plugins/supertab
-	url = https://github.com/ervandew/supertab.git
 [submodule "plugins/pathogen"]
 	path = plugins/pathogen
 	url = https://github.com/tpope/vim-pathogen
