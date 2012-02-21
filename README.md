@@ -44,14 +44,18 @@ Add a plugin
 Remove a plugin
 ===============
 
-*In the .gitmodules file:*
+*From Git:*
 
-> cat ~/.vim/.gitmodules | grep -v PLUGIN_NAME > ~/.vim/.gitmodules
+> cd ~/.vim
+>
+> git rm plugins/PLUGIN_NAME
+>
+> cat .gitmodules | grep -v PLUGIN_NAME > .gitmodules
 
-*Remove the plugin files:*
 
-> git rm -rf ~/.vim/plugins/PLUGIN_NAME
+*From FileSystem:*
 
+> rm -rf ~/.vim/plugins/PLUGIN_NAME
 
 Learn more
 ==========
