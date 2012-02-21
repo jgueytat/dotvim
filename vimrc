@@ -42,7 +42,6 @@
         set wildmenu
 
         " Tags
-        set tags=tags;/
         set tags+=~/.vim/tags/STL.tags
         set tags+=~/.vim/tags/Qt.tags
         
@@ -53,14 +52,21 @@
         " Personal shortcuts will begin with the mapleader key
         let mapleader = ";"
 
+        " Get the directory of the current buffer :
+        cnoremap %% <C-R>=expand('%:h').'/'<CR>
+
         " Launch tags generation :
         " Shortcut: Ctr + F12
         nmap <C-F12> :!ctags -R --c++-kinds=+pl --fields=+iaS --extra=+q -f tags .<CR>
 
         " Edit a file in the same directory of the current file edited :
         " Shortcut: <leader>e
-        nmap <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+        nmap <leader>e :e %%
         
+        " Change for the current tab to the directory of the current file edited :
+        " Shortcut: <leader>e
+        nmap <leader>lcd :lcd %%
+
         " Set all tab settings at once :
         " Function: :Stab
         command! -nargs=* Stab call Stab()
