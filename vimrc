@@ -40,6 +40,7 @@
 
         " Enhance display
         set wildmenu
+        set wildmode=longest,list
 
         " Tags
         set tags+=.tags;/
