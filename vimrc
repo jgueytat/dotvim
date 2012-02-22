@@ -42,6 +42,8 @@
         set wildmenu
 
         " Tags
+        set tags+=.tags;/
+        set tags+=~/sup_core/src/libs/sup/tags
         set tags+=~/.vim/tags/STL.tags
         set tags+=~/.vim/tags/Qt.tags
         
