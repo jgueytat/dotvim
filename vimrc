@@ -1,20 +1,36 @@
-" /Shortcut to find the defined shortcuts.
-" /Function to find the defined functions.
-
-" ++ Pathogen plugin: {{{
-    runtime plugins-enabled/pathogen/autoload/pathogen.vim
-    call pathogen#infect('plugins-enabled')
-" }}}
-
-" Basics : {{{
-    " Autocommands {{{
+" Vim Basics: {{{
+    " Autocommands: {{{
         if has("autocmd")
             filetype plugin indent on
             autocmd bufwritepost .vimrc source $MYVIMRC
         endif
     " }}}
     
-    " Settings {{{
+    " Mappings: {{{
+        " Personal shortcuts will begin with the mapleader key
+        let mapleader = ";"
+
+        " Edit .vimrc file in a new tab
+        " Shortcut: <leader>v
+        nmap <leader>v :tabedit $MYVIMRC<CR>
+
+        " Get the directory of the current buffer :
+        cnoremap %% <C-R>=expand('%:h').'/'<CR>
+
+        " Launch tags generation :
+        " Shortcut: Ctr + F12
+        nmap <C-F12> :!ctags -R --c++-kinds=+pl --fields=+iaS --extra=+q -f tags .<CR>
+
+        " Edit a file in the same directory of the current file edited :
+        " Shortcut: <leader>e
+        nmap <leader>e :e %%
+        
+        " Change for the current tab to the directory of the current file edited :
+        " Shortcut: <leader>e
+        nmap <leader>lcd :lcd %%
+    " }}}
+
+    " Options: {{{
         set nocompatible
 
         " Highlight search
@@ -52,29 +68,7 @@
         setlocal omnifunc=syntaxcomplete#Complete
     " }}}
     
-    " Shortcuts and Functions {{{
-        " Personal shortcuts will begin with the mapleader key
-        let mapleader = ";"
-
-        " Edit .vimrc file in a new tab
-        " Shortcut: <leader>v
-        nmap <leader>v :tabedit $MYVIMRC<CR>
-
-        " Get the directory of the current buffer :
-        cnoremap %% <C-R>=expand('%:h').'/'<CR>
-
-        " Launch tags generation :
-        " Shortcut: Ctr + F12
-        nmap <C-F12> :!ctags -R --c++-kinds=+pl --fields=+iaS --extra=+q -f tags .<CR>
-
-        " Edit a file in the same directory of the current file edited :
-        " Shortcut: <leader>e
-        nmap <leader>e :e %%
-        
-        " Change for the current tab to the directory of the current file edited :
-        " Shortcut: <leader>e
-        nmap <leader>lcd :lcd %%
-
+    " Functions: {{{
         " Set all tab settings at once :
         " Function: :Stab
         command! -nargs=* Stab call Stab()
@@ -89,46 +83,71 @@
     " }}}
 " }}}
 
-" ++ Gundo plugin : {{{
-    nmap <F5> :GundoToggle<CR>
+" Vim Plugins: {{{
+    " Pathogen: {{{
+        runtime plugins-enabled/pathogen/autoload/pathogen.vim
+        call pathogen#infect('plugins-enabled')
+    " }}}
+
+    " Gundo: {{{
+        " Mappings: {{{
+            nmap <F5> :GundoToggle<CR>
+        " }}}
+    " }}}
+
+    " Supertab: {{{
+        " Mappings: {{{
+            " Start completion
+            " Shortcut: <C-Space>
+            let g:SuperTabMappingForward = '<Nul>'
+        " }}}
+
+        " Options: {{{
+            " Set up the completion type to use
+            let g:SuperTabDefaultCompletionType = "context"
+        " }}}
+    " }}}
+
+    " Fugitive: {{{
+        " Autocommands: {{{
+            if has("autocmd")
+                autocmd BufReadPost fugitive://* set bufhidden=delete
+            endif
+        " }}}
+
+        " Options: {{{
+            set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+        " }}}
+    " }}}
+
+    " Session: {{{
+        " Options: {{{
+            let g:session_command_aliases = 1
+            let g:session_autoload = 'yes'
+            let g:session_default_to_last = 1
+            let g:session_autosave = 'yes'
+        " }}}
+    " }}}
+
+    " Taglist: {{{
+        " Mappings: {{{
+            nmap <F6> :TlistToggle<CR>
+        " }}}   
+
+        " Options: {{{
+            let Tlist_Exit_OnlyWindow = 1
+        " }}}
+    " }}}
+
+    " FuzzyFinder: {{{
+        " Autocommands: {{{
+        " }}}
+
+        " Mappings: {{{
+        " }}}
+
+        " Options: {{{
+        " }}}
+    " }}}
 " }}}
 
-" ++ Supertab plugin: {{{
-    let g:SuperTabMappingForward = '<c-space>'
-    let g:SuperTabMappingBackward = '<s-c-space>'
-    let g:SuperTabDefaultCompletionType = "context"
-" }}}
-
-" ++ Fugitive plugin: {{{
-    if has("autocmd")
-        autocmd BufReadPost fugitive://* set bufhidden=delete
-    endif
-
-    set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-" }}}
-
-" ++ Session plugin: {{{
-    " Options
-    let g:session_command_aliases = 1
-    let g:session_autoload = 'yes'
-    let g:session_default_to_last = 1
-    let g:session_autosave = 'yes'
-
-    " :Session... <TAB> commands
-
-" }}}
-
-" ++ Taglist plugin : {{{
-    " Options
-    let Tlist_Exit_OnlyWindow = 1
-
-    " :Tlist... <TAB> commands
-    nmap <F6> :TlistToggle<CR>
-" }}}
-
-" ++ FuzzyFinder plugin : {{{
-    " Options
-
-    " :Fuf... <TAB> commands
-
-" }}}
