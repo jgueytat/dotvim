@@ -2,14 +2,15 @@
 " /Function to find the defined functions.
 
 " ++ Pathogen plugin: {{{
-    runtime plugins/pathogen/autoload/pathogen.vim
-    call pathogen#infect('plugins')
+    runtime plugins-enabled/pathogen/autoload/pathogen.vim
+    call pathogen#infect('plugins-enabled')
 " }}}
 
 " Basics : {{{
     " Autocommands {{{
         if has("autocmd")
             filetype plugin indent on
+            autocmd bufwritepost .vimrc source $MYVIMRC
         endif
     " }}}
     
@@ -24,7 +25,7 @@
 
         " Get colors
         syntax on
-        colorscheme torte
+        colorscheme evening
 
         " Get line numbers
         set number
@@ -54,6 +55,10 @@
     " Shortcuts and Functions {{{
         " Personal shortcuts will begin with the mapleader key
         let mapleader = ";"
+
+        " Edit .vimrc file in a new tab
+        " Shortcut: <leader>v
+        nmap <leader>v :tabedit $MYVIMRC<CR>
 
         " Get the directory of the current buffer :
         cnoremap %% <C-R>=expand('%:h').'/'<CR>
@@ -89,6 +94,8 @@
 " }}}
 
 " ++ Supertab plugin: {{{
+    let g:SuperTabMappingForward = '<c-space>'
+    let g:SuperTabMappingBackward = '<s-c-space>'
     let g:SuperTabDefaultCompletionType = "context"
 " }}}
 
@@ -101,12 +108,27 @@
 " }}}
 
 " ++ Session plugin: {{{
-    let g:session_autoload = 'no'
+    " Options
+    let g:session_command_aliases = 1
+    let g:session_autoload = 'yes'
+    let g:session_default_to_last = 1
     let g:session_autosave = 'yes'
+
+    " :Session... <TAB> commands
+
 " }}}
 
 " ++ Taglist plugin : {{{
-    nmap <F6> :TlistToggle<CR>
+    " Options
     let Tlist_Exit_OnlyWindow = 1
+
+    " :Tlist... <TAB> commands
+    nmap <F6> :TlistToggle<CR>
 " }}}
 
+" ++ FuzzyFinder plugin : {{{
+    " Options
+
+    " :Fuf... <TAB> commands
+
+" }}}

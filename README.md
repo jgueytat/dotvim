@@ -16,6 +16,10 @@ Installation
 *Create symlinks:*
 
 > ln -s ~/.vim/vimrc ~/.vimrc
+>
+> cd ~/.vim/plugins-enabled
+>
+> for i in $(ls -d ../plugins-available/*/); do ln -sf $i .; done
 
 Update
 ======
@@ -56,6 +60,20 @@ Remove a plugin
 *From FileSystem:*
 
 > rm -rf ~/.vim/plugins/PLUGIN_NAME
+
+Enable a plugin
+===============
+
+*Create the link in plugins-enabled:*
+
+> cd ~/.vim/plugins-enabled
+>
+> ln -sf ../plugins-available/PLUGIN_NAME .
+
+Disable a plugin
+===============
+
+> rm ~/.vim/plugins-enabled/PLUGIN_NAME
 
 Learn more
 ==========
