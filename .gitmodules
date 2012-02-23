@@ -1,27 +1,27 @@
-[submodule "plugins/fugitive"]
-	path = plugins/fugitive
+[submodule "plugins-available/fugitive"]
+	path = plugins-available/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "plugins/gundo"]
-	path = plugins/gundo
+[submodule "plugins-available/gundo"]
+	path = plugins-available/gundo
 	url = http://github.com/sjl/gundo.vim.git
-[submodule "plugins/pathogen"]
-	path = plugins/pathogen
+[submodule "plugins-available/pathogen"]
+	path = plugins-available/pathogen
 	url = https://github.com/tpope/vim-pathogen
-[submodule "plugins/OmniCppComplete"]
-	path = plugins/OmniCppComplete
+[submodule "plugins-available/OmniCppComplete"]
+	path = plugins-available/OmniCppComplete
 	url = https://github.com/vim-scripts/OmniCppComplete
-[submodule "plugins/session"]
-	path = plugins/session
+[submodule "plugins-available/session"]
+	path = plugins-available/session
 	url = https://github.com/xolox/vim-session.git
-[submodule "plugins/taglist"]
-	path = plugins/taglist
+[submodule "plugins-available/taglist"]
+	path = plugins-available/taglist
 	url = https://github.com/vim-scripts/taglist.vim.git
-[submodule "plugins/supertab"]
-	path = plugins/supertab
+[submodule "plugins-available/supertab"]
+	path = plugins-available/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule "plugins/FuzzyFinder"]
-	path = plugins/FuzzyFinder
+[submodule "plugins-available/FuzzyFinder"]
+	path = plugins-available/FuzzyFinder
 	url = https://github.com/vim-scripts/FuzzyFinder.git
-[submodule "plugins/L9"]
-	path = plugins/L9
+[submodule "plugins-available/L9"]
+	path = plugins-available/L9
 	url = https://github.com/vim-scripts/L9.git
