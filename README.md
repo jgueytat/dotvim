@@ -16,10 +16,6 @@ Installation
 *Create symlinks:*
 
 > ln -s ~/.vim/vimrc ~/.vimrc
->
-> cd ~/.vim/plugins-enabled
->
-> for i in $(ls -d ../plugins-available/*/); do ln -sf $i .; done
 
 Update
 ======
