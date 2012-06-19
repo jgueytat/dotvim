@@ -28,6 +28,8 @@
         " Change for the current tab to the directory of the current file edited :
         " Shortcut: <leader>e
         nmap <leader>lcd :lcd %%
+
+        " set makeprg=make\ -j4\ -C\ build\-\$\(eval\ hostname\)
     " }}}
 
     " Options: {{{
@@ -53,7 +55,7 @@
         set hidden
         
         " Folding method
-        set foldmethod=indent
+        " set foldmethod=indent
 
         " Enhance display
         set wildmenu
@@ -136,6 +138,7 @@
 
         " Options: {{{
             let Tlist_Exit_OnlyWindow = 1
+            let Tlist_File_Fold_Auto_Close = 1
         " }}}
     " }}}
 
