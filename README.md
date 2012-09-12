@@ -47,6 +47,7 @@ Remove a plugin
 *From FileSystem:*
 
 > rm -rf ~/.vim/plugins-available/PLUGIN_NAME
+>
 > rm -f ~/.vim/plugins-enabled/PLUGIN_NAME
 
 
