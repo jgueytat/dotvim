@@ -17,10 +17,6 @@
         " Get the directory of the current buffer :
         cnoremap %% <C-R>=expand('%:h').'/'<CR>
 
-        " Launch tags generation :
-        " Shortcut: Ctr + F12
-        nmap <C-F12> :!ctags -R --c++-kinds=+pl --fields=+iaS --extra=+q -f tags .<CR>
-
         " Edit a file in the same directory of the current file edited :
         " Shortcut: <leader>e
         nmap <leader>e :e %%
@@ -28,6 +24,10 @@
         " Change for the current tab to the directory of the current file edited :
         " Shortcut: <leader>e
         nmap <leader>lcd :lcd %%
+
+        " Launch the generation of tags files
+        " Shortcut: F9
+        nmap <F9> :!ctags -R --c++-kinds=+pl --fields=+iaS --extra=+q -f tags .<CR>
 
         " set makeprg=make\ -j4\ -C\ build\-\$\(eval\ hostname\)
     " }}}
@@ -55,17 +55,14 @@
         set hidden
         
         " Folding method
-        " set foldmethod=indent
+        set foldmethod=indent
 
         " Enhance display
         set wildmenu
         set wildmode=longest,list
 
-        " Tags
-        set tags+=.tags;/
-        set tags+=~/sup_core/src/libs/sup/tags
-        set tags+=~/.vim/tags/STL.tags
-        set tags+=~/.vim/tags/Qt.tags
+        " Look for tags file until the root
+        set tags+=tags;/
         
         setlocal omnifunc=syntaxcomplete#Complete
     " }}}
@@ -82,6 +79,22 @@
                 let &l:shiftwidth  = l:tabstop
             endif
         endfunction
+
+        "
+        "
+        command! BuildDirectoryPathSet :call BuildDirectoryPathSet()
+        function! BuildDirectoryPathSet()
+            " let build_directory_name=join(["build", hostname()], '-')
+            let build_directory_name="build"
+            let build_directory_path=finddir(build_directory_name, '.;/')
+            
+            if isdirectory(build_directory_path)
+                echo build_directory_path
+                let makecommand=join(["cmake -E chdir", build_directory_path, "cmake .. && make -C", build_directory_path], ' ')
+                let &makeprg=makecommand
+            endif
+        endfunction
+
     " }}}
 " }}}
 
@@ -98,12 +111,6 @@
     " }}}
 
     " Supertab: {{{
-        " Mappings: {{{
-            " Start completion
-            " Shortcut: <C-Space>
-            let g:SuperTabMappingForward = '<Nul>'
-        " }}}
-
         " Options: {{{
             " Set up the completion type to use
             let g:SuperTabDefaultCompletionType = "context"
@@ -139,17 +146,6 @@
         " Options: {{{
             let Tlist_Exit_OnlyWindow = 1
             let Tlist_File_Fold_Auto_Close = 1
-        " }}}
-    " }}}
-
-    " FuzzyFinder: {{{
-        " Autocommands: {{{
-        " }}}
-
-        " Mappings: {{{
-        " }}}
-
-        " Options: {{{
         " }}}
     " }}}
 " }}}

@@ -39,23 +39,24 @@ Add a plugin
 
 > cd ~/.vim
 >
-> git submodule add GIT_URL_REPOSITORY plugins/PLUGIN_NAME
+> git submodule add GIT_URL_REPOSITORY plugins-available/PLUGIN_NAME
 
 Remove a plugin
 ===============
+
+*From FileSystem:*
+
+> rm -rf ~/.vim/plugins-available/PLUGIN_NAME
+> rm -f ~/.vim/plugins-enabled/PLUGIN_NAME
+
 
 *From Git:*
 
 > cd ~/.vim
 >
-> git rm plugins/PLUGIN_NAME
+> git rm plugins-available/PLUGIN_NAME
 >
-> cat .gitmodules | grep -v PLUGIN_NAME > .gitmodules
-
-
-*From FileSystem:*
-
-> rm -rf ~/.vim/plugins/PLUGIN_NAME
+> mv .gitmodules .gitmodules-old; cat .gitmodules-old | grep -v Conque-Shell > .gitmodules; rm .gitmodules-old
 
 Enable a plugin
 ===============
