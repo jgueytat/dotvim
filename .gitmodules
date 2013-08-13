@@ -28,3 +28,9 @@
 [submodule "plugins-available/vim-misc"]
 	path = plugins-available/vim-misc
 	url = https://github.com/vim-scripts/vim-misc
+[submodule "plugins-available/surround"]
+	path = plugins-available/surround
+	url = https://github.com/vim-scripts/surround.vim
+[submodule "plugins-available/Emmet"]
+	path = plugins-available/Emmet
+	url = https://github.com/vim-scripts/Emmet.vim
