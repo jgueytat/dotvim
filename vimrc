@@ -43,7 +43,7 @@
 
         " Get colors
         syntax on
-        colorscheme evening
+        colorscheme desert
 
         " Get line numbers
         set number
@@ -79,22 +79,6 @@
                 let &l:shiftwidth  = l:tabstop
             endif
         endfunction
-
-        "
-        "
-        command! BuildDirectoryPathSet :call BuildDirectoryPathSet()
-        function! BuildDirectoryPathSet()
-            " let build_directory_name=join(["build", hostname()], '-')
-            let build_directory_name="build"
-            let build_directory_path=finddir(build_directory_name, '.;/')
-            
-            if isdirectory(build_directory_path)
-                echo build_directory_path
-                let makecommand=join(["cmake -E chdir", build_directory_path, "cmake .. && make -C", build_directory_path], ' ')
-                let &makeprg=makecommand
-            endif
-        endfunction
-
     " }}}
 " }}}
 
