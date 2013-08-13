@@ -101,7 +101,7 @@
 " Vim Plugins: {{{
     " Pathogen: {{{
         runtime plugins-enabled/pathogen/autoload/pathogen.vim
-        call pathogen#infect('plugins-enabled')
+        call pathogen#infect('plugins-enabled/{}')
     " }}}
 
     " Gundo: {{{

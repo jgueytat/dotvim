@@ -25,3 +25,6 @@
 [submodule "plugins-available/L9"]
 	path = plugins-available/L9
 	url = https://github.com/vim-scripts/L9.git
+[submodule "plugins-available/vim-misc"]
+	path = plugins-available/vim-misc
+	url = https://github.com/vim-scripts/vim-misc
