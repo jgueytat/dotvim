@@ -1,73 +1,83 @@
-## Installation
+# ![dotvim](http://upload.wikimedia.org/wikipedia/commons/4/4f/Icon-Vim.svg)
 
-*Get a copy:*
+This repository is the content of my **.vim** directory. Basically I'm only playing with existing plugins. I just add them as submodule and configure them in my **.vimrc** file.
 
-> git clone git://github.com/jgueytat/dotvim.git ~/.vim
+## Play with the Vim plugins
 
-*Get the plugins:*
+### Installation
 
-> cd ~/.vim
->
-> git submodule init
->
-> git submodule update
+**Clone the repository:**
 
-*Create symlinks:*
+```Bash
+git clone git://github.com/jgueytat/dotvim.git ~/.vim
+```
 
-> ln -s ~/.vim/vimrc ~/.vimrc
+**Get the plugins:**
 
-## Update
+```Bash
+cd ~/.vim  
+git submodule init  
+git submodule update  
+```
 
-*Update your copy:*
+**Create symlinks:**
 
-> cd ~/.vim
->
-> git pull origin master
+```Bash
+ln -s ~/.vim/vimrc ~/.vimrc
+```
 
-*Update all plugins:*
+### Update
 
-> git submodule init 
-> 
-> git submodule update
-> 
-> git submodule foreach git pull origin master
+**Update your repository:**
 
-## Add a plugin
+```Bash
+cd ~/.vim  
+git pull origin master
+```
 
-> cd ~/.vim
->
-> git submodule add GIT_URL_REPOSITORY plugins-available/PLUGIN_NAME
+**Update all plugins:**
 
-## Remove a plugin
+```Bash
+git submodule foreach git pull origin master
+```
 
-*From FileSystem:*
+### Add a plugin
 
-> rm -rf ~/.vim/plugins-available/PLUGIN_NAME
->
-> rm -f ~/.vim/plugins-enabled/PLUGIN_NAME
+```Bash
+cd ~/.vim  
+git submodule add GIT_URL_REPOSITORY plugins-available/PLUGIN_NAME
+```
 
+### Remove a plugin
 
-*From Git:*
+**From FileSystem:**
 
-> cd ~/.vim
->
-> git rm plugins-available/PLUGIN_NAME
->
-> mv .gitmodules .gitmodules-old; cat .gitmodules-old | grep -v Conque-Shell > .gitmodules; rm .gitmodules-old
+```Bash
+rm -rf ~/.vim/plugins-available/PLUGIN_NAME  
+rm -f ~/.vim/plugins-enabled/PLUGIN_NAME
+```
+**From Git:**
 
-## Enable a plugin
+```Bash
+cd ~/.vim  
+git rm plugins-available/PLUGIN_NAME  
+mv .gitmodules .gitmodules-old; cat .gitmodules-old | grep -v Conque-Shell > .gitmodules; rm .gitmodules-old
+```
 
-*Create the link in plugins-enabled:*
+### Enable a plugin
 
-> cd ~/.vim/plugins-enabled
->
-> ln -sf ../plugins-available/PLUGIN_NAME .
+**Create the link in plugins-enabled:**
 
-## Disable a plugin
+```Bash
+cd ~/.vim/plugins-enabled
+ln -sf ../plugins-available/PLUGIN_NAME .
+```
+
+### Disable a plugin
 
 > rm ~/.vim/plugins-enabled/PLUGIN_NAME
 
-## Learn more
+## Learn more about Vim
 
 ### vimtutor
 
@@ -94,5 +104,6 @@ In Vim type **:help cmd** to know more about the "cmd" command.
 ### Useful Links
 
 - [Vimcasts.org](http://vimcasts.org/ "A few short videos to love Vim!")
+- [VimGolf](http://vimgolf.com/ "Real Vim ninjas count every keystroke - do you?")
 - [Official documentation](http://vimdoc.sourceforge.net/htmldoc/ "This should be the equivalent of :help")
 
