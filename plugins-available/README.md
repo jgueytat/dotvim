@@ -1,16 +1,21 @@
-Plugins' list:
-==============
+## Plugins' selection
 
- - **FuzzyFinder**       improve all kinds of navigation 
- - **L9**                library needed for the FuzzyFinder plugin
+### Mandatory
+- **pathogen:**         handle submodule plugins
 
- - **OmniCppComplete:**  add C++ auto-completion
- - **fugitive:**         use Git inside Vim
- - **gundo:**            add powerful undo capacity
- - **pathogen:**         handle submodule plugins
- - **session:**          add :OpenSession and :SaveSession functionalities
- - **vim-misc:**         library needed for the session plugin
+### Git
+- **fugitive:**         use Git inside Vim
 
- - **supertab:**         improve completion by pressing TAB
- - **taglist:**          display nicely the tags of a file
- - **Emmet:**            ...
+### Session
+- **session:**          add :OpenSession and :SaveSession functionalities
+- **vim-misc:**         library needed for the session plugin
+
+### History
+- **gundo:**            add powerful undo capacity
+
+### Completion
+- **supertab:**         improve completion by pressing TAB
+
+### Langage dependant
+- **OmniCppComplete:**  add C++ auto-completion ( **C++** )
+- **Emmet:**            write HTML code at the speed of light ( **HTML** )
