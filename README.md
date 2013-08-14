@@ -43,9 +43,11 @@ git submodule foreach git pull origin master
 
 ### Add a plugin
 
+Don't forget to replace **GIT_URL_REPOSITORY** and **PLUGIN_NAME.**
 ```Bash
-cd ~/.vim &&
+cd ~/.vim
 git submodule add GIT_URL_REPOSITORY plugins-available/PLUGIN_NAME
+git commit -m "The plugin PLUGIN_NAME has been added."
 ```
 
 ### Remove a plugin
@@ -79,7 +81,7 @@ rm -r ~/.vim/plugins-available/${PLUGIN_NAME_TO_REMOVE}
 
 ```Bash
 cd ~/.vim/plugins-enabled
-ln -sf ../plugins-available/PLUGIN_NAME .
+ln -s ../plugins-available/PLUGIN_NAME .
 ```
 
 ### Disable a plugin
