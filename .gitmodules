@@ -19,9 +19,6 @@
 [submodule "plugins-available/supertab"]
 	path = plugins-available/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule "plugins-available/FuzzyFinder"]
-	path = plugins-available/FuzzyFinder
-	url = https://github.com/vim-scripts/FuzzyFinder.git
 [submodule "plugins-available/L9"]
 	path = plugins-available/L9
 	url = https://github.com/vim-scripts/L9.git
