@@ -71,7 +71,7 @@ git commit -m "The plugin ${PLUGIN_NAME_TO_REMOVE} has been removed."
 **From FileSystem :**
 
 ```Bash
-rm -r ~/.vim/plugins-available/${PLUGIN_NAME_TO_REMOVE}
+rm -rf ~/.vim/plugins-available/${PLUGIN_NAME_TO_REMOVE}
 ```
 
 
