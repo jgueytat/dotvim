@@ -110,8 +110,8 @@ rm ~/.vim/plugins-enabled/PLUGIN_NAME
         - [visual-operators](http://vimdoc.sourceforge.net/htmldoc/visual.html#visual-operators) : operators available in Visual mode
 
 
-### Useful Links
+* **Useful Links :**
 
-- [Vimcasts.org](http://vimcasts.org/ "A few short videos to love Vim!")
-- [VimGolf](http://vimgolf.com/ "Real Vim ninjas count every keystroke - do you?")
-- [Official documentation](http://vimdoc.sourceforge.net/htmldoc/ "This should be the equivalent of :help")
+    + [Vimcasts.org](http://vimcasts.org/ "A few short videos to love Vim!")
+    + [VimGolf](http://vimgolf.com/ "Real Vim ninjas count every keystroke - do you?")
+    + [Official documentation](http://vimdoc.sourceforge.net/htmldoc/ "This should be the equivalent of :help")
