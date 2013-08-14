@@ -1,5 +1,4 @@
-Installation
-============
+## Installation
 
 *Get a copy:*
 
@@ -17,8 +16,7 @@ Installation
 
 > ln -s ~/.vim/vimrc ~/.vimrc
 
-Update
-======
+## Update
 
 *Update your copy:*
 
@@ -34,15 +32,13 @@ Update
 > 
 > git submodule foreach git pull origin master
 
-Add a plugin
-============
+## Add a plugin
 
 > cd ~/.vim
 >
 > git submodule add GIT_URL_REPOSITORY plugins-available/PLUGIN_NAME
 
-Remove a plugin
-===============
+## Remove a plugin
 
 *From FileSystem:*
 
@@ -59,8 +55,7 @@ Remove a plugin
 >
 > mv .gitmodules .gitmodules-old; cat .gitmodules-old | grep -v Conque-Shell > .gitmodules; rm .gitmodules-old
 
-Enable a plugin
-===============
+## Enable a plugin
 
 *Create the link in plugins-enabled:*
 
@@ -68,13 +63,11 @@ Enable a plugin
 >
 > ln -sf ../plugins-available/PLUGIN_NAME .
 
-Disable a plugin
-===============
+## Disable a plugin
 
 > rm ~/.vim/plugins-enabled/PLUGIN_NAME
 
-Learn more
-==========
+## Learn more
 
 ### vimtutor
 
