@@ -6,13 +6,13 @@ This repository is the content of my **.vim** directory. Basically I'm only play
 
 ### Installation
 
-**Clone the repository:**
+**Clone the repository :**
 
 ```Bash
 git clone git://github.com/jgueytat/dotvim.git ~/.vim
 ```
 
-**Get the plugins:**
+**Get the plugins :**
 
 ```Bash
 cd ~/.vim &&
@@ -20,7 +20,7 @@ git submodule init &&
 git submodule update
 ```
 
-**Create symlinks:**
+**Create symlinks :**
 
 ```Bash
 ln -s ~/.vim/vimrc ~/.vimrc
@@ -28,14 +28,14 @@ ln -s ~/.vim/vimrc ~/.vimrc
 
 ### Update
 
-**Update your repository:**
+**Update your repository :**
 
 ```Bash
 cd ~/.vim &&
 git pull origin master
 ```
 
-**Update all plugins:**
+**Update all plugins :**
 
 ```Bash
 git submodule foreach git pull origin master
@@ -52,7 +52,7 @@ git commit -m "The plugin PLUGIN_NAME has been added."
 
 ### Remove a plugin
 
-**From Git:**
+**From Git :**
 
 ```Bash
 export PLUGIN_NAME_TO_REMOVE=SET_PLUGIN_NAME_TO_REMOVE_HERE
@@ -68,7 +68,7 @@ git rm plugins-enabled/${PLUGIN_NAME_TO_REMOVE} &&
 git commit -m "The plugin ${PLUGIN_NAME_TO_REMOVE} has been removed."
 
 ```
-**From FileSystem:**
+**From FileSystem :**
 
 ```Bash
 rm -r ~/.vim/plugins-available/${PLUGIN_NAME_TO_REMOVE}
@@ -77,7 +77,7 @@ rm -r ~/.vim/plugins-available/${PLUGIN_NAME_TO_REMOVE}
 
 ### Enable a plugin
 
-**Create the link in plugins-enabled:**
+**Create the link in plugins-enabled :**
 
 ```Bash
 cd ~/.vim/plugins-enabled
@@ -92,26 +92,22 @@ rm ~/.vim/plugins-enabled/PLUGIN_NAME
 
 ## Learn more about Vim
 
-### vimtutor
+* **vimtutor :** Go through this tutorial. This is the only place to begin with Vim.
 
-Go through this tutorial. This is the only place to begin with Vim.
+* **:help cmd :** In Vim type **:help cmd** to know more about the "cmd" command.
 
-### :help cmd
+    + [motion.txt](http://vimdoc.sourceforge.net/htmldoc/motion.html "Vim documentation: motion") : Learn to move fast.
 
-In Vim type **:help cmd** to know more about the "cmd" command.
+        - [text-obect](http://vimdoc.sourceforge.net/htmldoc/motion.html#text-objects): use to specify text selection
+        - [m](http://vimdoc.sourceforge.net/htmldoc/motion.html#mark): to mark a point in a file
 
-[motion.txt](http://vimdoc.sourceforge.net/htmldoc/motion.html "Vim documentation: motion")
+    + [repeat.txt](http://vimdoc.sourceforge.net/htmldoc/repeat.html "Vim documentation: repeat") : Do not repeat yourself.
 
-- [text-obect](http://vimdoc.sourceforge.net/htmldoc/motion.html#text-objects): use to specify text selection
-- [m](http://vimdoc.sourceforge.net/htmldoc/motion.html#mark): to mark a point in a file
+        - [q](http://vimdoc.sourceforge.net/htmldoc/repeat.html#complex-repeat): to register macros
 
-[repeat.txt](http://vimdoc.sourceforge.net/htmldoc/repeat.html "Vim documentation: repeat")
+    + [visual.txt](http://vimdoc.sourceforge.net/htmldoc/visual.html "Vim documentation: visual") : Useful visual commands to register macro.
 
-- [q](http://vimdoc.sourceforge.net/htmldoc/repeat.html#complex-repeat): to register macros
-
-[visual.txt](http://vimdoc.sourceforge.net/htmldoc/visual.html "Vim documentation: visual")
-
-- [visual-operators](http://vimdoc.sourceforge.net/htmldoc/visual.html#visual-operators) : operators available in Visual mode
+        - [visual-operators](http://vimdoc.sourceforge.net/htmldoc/visual.html#visual-operators) : operators available in Visual mode
 
 
 ### Useful Links
