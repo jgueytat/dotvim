@@ -15,9 +15,9 @@ git clone git://github.com/jgueytat/dotvim.git ~/.vim
 **Get the plugins:**
 
 ```Bash
-cd ~/.vim  
-git submodule init  
-git submodule update  
+cd ~/.vim &&
+git submodule init &&
+git submodule update
 ```
 
 **Create symlinks:**
@@ -31,7 +31,7 @@ ln -s ~/.vim/vimrc ~/.vimrc
 **Update your repository:**
 
 ```Bash
-cd ~/.vim  
+cd ~/.vim &&
 git pull origin master
 ```
 
@@ -44,7 +44,7 @@ git submodule foreach git pull origin master
 ### Add a plugin
 
 ```Bash
-cd ~/.vim  
+cd ~/.vim &&
 git submodule add GIT_URL_REPOSITORY plugins-available/PLUGIN_NAME
 ```
 
@@ -53,18 +53,23 @@ git submodule add GIT_URL_REPOSITORY plugins-available/PLUGIN_NAME
 **From Git:**
 
 ```Bash
-cd ~/.vim  
-mv .gitmodules .gitmodules-old; cat .gitmodules-old | grep -v PLUGIN_NAME > .gitmodules; rm .gitmodules-old
-mv .git/config .git/config-old; cat .git/config-old | grep -v PLUGIN_NAME > .git/config; rm .git/config-old
-git rm --cached plugins-available/PLUGIN_NAME
-git rm plugins-enabled/PLUGIN_NAME
+export PLUGIN_NAME_TO_REMOVE=SET_PLUGIN_NAME_TO_REMOVE_HERE
+```
+
+```Bash
+cd ~/.vim &&
+mv .git/config .git/config-old; cat .git/config-old | grep -v ${PLUGIN_NAME_TO_REMOVE} > .git/config; rm .git/config-old &&
+mv .gitmodules .gitmodules-old; cat .gitmodules-old | grep -v ${PLUGIN_NAME_TO_REMOVE} > .gitmodules; rm .gitmodules-old &&
+git add .gitmodules &&
+git rm --cached plugins-available/${PLUGIN_NAME_TO_REMOVE} &&
+git rm plugins-enabled/${PLUGIN_NAME_TO_REMOVE} &&
+git commit -m "The plugin ${PLUGIN_NAME_TO_REMOVE} has been removed."
 
 ```
 **From FileSystem:**
 
 ```Bash
-rm -rf ~/.vim/plugins-available/PLUGIN_NAME  
-rm -f ~/.vim/plugins-enabled/PLUGIN_NAME
+rm -r ~/.vim/plugins-available/${PLUGIN_NAME_TO_REMOVE}
 ```
 
 
@@ -79,7 +84,9 @@ ln -sf ../plugins-available/PLUGIN_NAME .
 
 ### Disable a plugin
 
-> rm ~/.vim/plugins-enabled/PLUGIN_NAME
+```Bash
+rm ~/.vim/plugins-enabled/PLUGIN_NAME
+```
 
 ## Learn more about Vim
 
