@@ -12,6 +12,14 @@ This repository is the content of my **.vim** directory. Basically I'm only play
 git clone git://github.com/jgueytat/dotvim.git ~/.vim
 ```
 
+**Get the plugins:**
+
+```Bash
+cd ~/.vim  
+git submodule init  
+git submodule update  
+```
+
 **Create symlinks:**
 
 ```Bash
@@ -98,4 +106,3 @@ In Vim type **:help cmd** to know more about the "cmd" command.
 - [Vimcasts.org](http://vimcasts.org/ "A few short videos to love Vim!")
 - [VimGolf](http://vimgolf.com/ "Real Vim ninjas count every keystroke - do you?")
 - [Official documentation](http://vimdoc.sourceforge.net/htmldoc/ "This should be the equivalent of :help")
-
