@@ -13,9 +13,6 @@
 [submodule "plugins-available/session"]
 	path = plugins-available/session
 	url = https://github.com/xolox/vim-session.git
-[submodule "plugins-available/taglist"]
-	path = plugins-available/taglist
-	url = https://github.com/vim-scripts/taglist.vim.git
 [submodule "plugins-available/supertab"]
 	path = plugins-available/supertab
 	url = https://github.com/ervandew/supertab.git
