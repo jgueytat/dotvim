@@ -12,14 +12,6 @@ This repository is the content of my **.vim** directory. Basically I'm only play
 git clone git://github.com/jgueytat/dotvim.git ~/.vim
 ```
 
-**Get the plugins:**
-
-```Bash
-cd ~/.vim  
-git submodule init  
-git submodule update  
-```
-
 **Create symlinks:**
 
 ```Bash
