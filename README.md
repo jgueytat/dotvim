@@ -50,19 +50,23 @@ git submodule add GIT_URL_REPOSITORY plugins-available/PLUGIN_NAME
 
 ### Remove a plugin
 
+**From Git:**
+
+```Bash
+cd ~/.vim  
+mv .gitmodules .gitmodules-old; cat .gitmodules-old | grep -v PLUGIN_NAME > .gitmodules; rm .gitmodules-old
+mv .git/config .git/config-old; cat .git/config-old | grep -v PLUGIN_NAME > .git/config; rm .git/config-old
+git rm --cached plugins-available/PLUGIN_NAME
+git rm plugins-enabled/PLUGIN_NAME
+
+```
 **From FileSystem:**
 
 ```Bash
 rm -rf ~/.vim/plugins-available/PLUGIN_NAME  
 rm -f ~/.vim/plugins-enabled/PLUGIN_NAME
 ```
-**From Git:**
 
-```Bash
-cd ~/.vim  
-git rm plugins-available/PLUGIN_NAME  
-mv .gitmodules .gitmodules-old; cat .gitmodules-old | grep -v Conque-Shell > .gitmodules; rm .gitmodules-old
-```
 
 ### Enable a plugin
 
