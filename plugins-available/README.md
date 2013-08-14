@@ -16,6 +16,9 @@
 ### Completion
 - **supertab:**         improve completion by pressing TAB
 
+### Easy life
+- **surround:**         handle tags, brackets,...
+
 ### Langage dependant
 - **OmniCppComplete:**  add C++ auto-completion ( **C++** )
 - **Emmet:**            write HTML code at the speed of light ( **HTML** )
