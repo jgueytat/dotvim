@@ -31,6 +31,6 @@
 [submodule "plugins-available/easytags.vim"]
 	path = plugins-available/easytags.vim
 	url = https://github.com/vim-scripts/easytags.vim.git
-[submodule "tagbar"]
-	path = tagbar
+[submodule "plugins-available/tagbar"]
+	path = plugins-available/tagbar
 	url = https://github.com/majutsushi/tagbar.git
