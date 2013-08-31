@@ -17,19 +17,6 @@
         " Get the directory of the current buffer :
         cnoremap %% <C-R>=expand('%:h').'/'<CR>
 
-        " Edit a file in the same directory of the current file edited :
-        " Shortcut: <leader>e
-        nmap <leader>e :e %%
-        
-        " Change for the current tab to the directory of the current file edited :
-        " Shortcut: <leader>e
-        nmap <leader>lcd :lcd %%
-
-        " Launch the generation of tags files
-        " Shortcut: F9
-        nmap <F9> :!ctags -R --c++-kinds=+pl --fields=+iaS --extra=+q -f tags .<CR>
-
-        " set makeprg=make\ -j4\ -C\ build\-\$\(eval\ hostname\)
     " }}}
 
     " Options: {{{
@@ -43,13 +30,9 @@
 
         " Get colors
         syntax on
-        colorscheme desert
 
         " Get line numbers
         set number
-
-        " Enable the mouse
-        set mouse=a
 
         " Switch buffer without saving
         set hidden
@@ -62,7 +45,7 @@
         set wildmode=longest,list
 
         " Look for tags file until the root
-        set tags+=tags;/
+        " set tags+=tags;/
         
         setlocal omnifunc=syntaxcomplete#Complete
     " }}}
