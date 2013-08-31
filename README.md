@@ -1,105 +1,117 @@
-Installation
-============
+# ![dotvim](http://upload.wikimedia.org/wikipedia/commons/4/4f/Icon-Vim.svg)
 
-*Get a copy:*
+This repository is the content of my **.vim** directory. Basically I'm only playing with existing plugins. I just add them as submodule and configure them in my **.vimrc** file.
 
-> git clone git://github.com/jgueytat/dotvim.git ~/.vim
+## Play with the Vim plugins
 
-*Get the plugins:*
+### Installation
 
-> cd ~/.vim
->
-> git submodule init
->
-> git submodule update
+**Clone the repository :**
 
-*Create symlinks:*
+```Bash
+git clone git://github.com/jgueytat/dotvim.git ~/.vim
+```
 
-> ln -s ~/.vim/vimrc ~/.vimrc
+**Get the plugins :**
 
-Update
-======
+```Bash
+cd ~/.vim &&
+git submodule init &&
+git submodule update
+```
 
-*Update your copy:*
+**Create symlinks :**
 
-> cd ~/.vim
->
-> git pull origin master
+```Bash
+ln -s ~/.vim/vimrc ~/.vimrc
+```
 
-*Update all plugins:*
+### Update
 
-> git submodule init 
-> 
-> git submodule update
-> 
-> git submodule foreach git pull origin master
+**Update your repository :**
 
-Add a plugin
-============
+```Bash
+cd ~/.vim &&
+git pull origin master
+```
 
-> cd ~/.vim
->
-> git submodule add GIT_URL_REPOSITORY plugins-available/PLUGIN_NAME
+**Update all plugins :**
 
-Remove a plugin
-===============
+```Bash
+git submodule foreach git pull origin master
+```
 
-*From FileSystem:*
+### Add a plugin
 
-> rm -rf ~/.vim/plugins-available/PLUGIN_NAME
->
-> rm -f ~/.vim/plugins-enabled/PLUGIN_NAME
+Don't forget to replace **GIT_URL_REPOSITORY** and **PLUGIN_NAME.**
+```Bash
+cd ~/.vim
+git submodule add GIT_URL_REPOSITORY plugins-available/PLUGIN_NAME
+git commit -m "The plugin PLUGIN_NAME has been added."
+```
 
+### Remove a plugin
 
-*From Git:*
+**From Git :**
 
-> cd ~/.vim
->
-> git rm plugins-available/PLUGIN_NAME
->
-> mv .gitmodules .gitmodules-old; cat .gitmodules-old | grep -v Conque-Shell > .gitmodules; rm .gitmodules-old
+```Bash
+export PLUGIN_NAME_TO_REMOVE=SET_PLUGIN_NAME_TO_REMOVE_HERE
+```
 
-Enable a plugin
-===============
+```Bash
+cd ~/.vim &&
+mv .git/config .git/config-old; cat .git/config-old | grep -v ${PLUGIN_NAME_TO_REMOVE} > .git/config; rm .git/config-old &&
+mv .gitmodules .gitmodules-old; cat .gitmodules-old | grep -v ${PLUGIN_NAME_TO_REMOVE} > .gitmodules; rm .gitmodules-old &&
+git add .gitmodules &&
+git rm --cached plugins-available/${PLUGIN_NAME_TO_REMOVE} &&
+git rm plugins-enabled/${PLUGIN_NAME_TO_REMOVE} &&
+git commit -m "The plugin ${PLUGIN_NAME_TO_REMOVE} has been removed."
 
-*Create the link in plugins-enabled:*
+```
+**From FileSystem :**
 
-> cd ~/.vim/plugins-enabled
->
-> ln -sf ../plugins-available/PLUGIN_NAME .
-
-Disable a plugin
-===============
-
-> rm ~/.vim/plugins-enabled/PLUGIN_NAME
-
-Learn more
-==========
-
-### vimtutor
-
-Go through this tutorial. This is the only place to begin with Vim.
-
-### :help cmd
-
-In Vim type **:help cmd** to know more about the "cmd" command.
-
-[motion.txt](http://vimdoc.sourceforge.net/htmldoc/motion.html "Vim documentation: motion")
-
-- [text-obect](http://vimdoc.sourceforge.net/htmldoc/motion.html#text-objects): use to specify text selection
-- [m](http://vimdoc.sourceforge.net/htmldoc/motion.html#mark): to mark a point in a file
-
-[repeat.txt](http://vimdoc.sourceforge.net/htmldoc/repeat.html "Vim documentation: repeat")
-
-- [q](http://vimdoc.sourceforge.net/htmldoc/repeat.html#complex-repeat): to register macros
-
-[visual.txt](http://vimdoc.sourceforge.net/htmldoc/visual.html "Vim documentation: visual")
-
-- [visual-operators](http://vimdoc.sourceforge.net/htmldoc/visual.html#visual-operators) : operators available in Visual mode
+```Bash
+rm -rf ~/.vim/plugins-available/${PLUGIN_NAME_TO_REMOVE}
+```
 
 
-### Useful Links
+### Enable a plugin
 
-- [Vimcasts.org](http://vimcasts.org/ "A few short videos to love Vim!")
-- [Official documentation](http://vimdoc.sourceforge.net/htmldoc/ "This should be the equivalent of :help")
+**Create the link in plugins-enabled :**
 
+```Bash
+cd ~/.vim/plugins-enabled
+ln -s ../plugins-available/PLUGIN_NAME .
+```
+
+### Disable a plugin
+
+```Bash
+rm ~/.vim/plugins-enabled/PLUGIN_NAME
+```
+
+## Learn more about Vim
+
+* **vimtutor :** Go through this tutorial. This is the only place to begin with Vim.
+
+* **:help cmd :** In Vim type **:help cmd** to know more about the "cmd" command.
+
+    + [motion.txt](http://vimdoc.sourceforge.net/htmldoc/motion.html "Vim documentation: motion") : Learn to move fast.
+
+        - [text-obect](http://vimdoc.sourceforge.net/htmldoc/motion.html#text-objects): use to specify text selection
+        - [m](http://vimdoc.sourceforge.net/htmldoc/motion.html#mark): to mark a point in a file
+
+    + [repeat.txt](http://vimdoc.sourceforge.net/htmldoc/repeat.html "Vim documentation: repeat") : Do not repeat yourself.
+
+        - [q](http://vimdoc.sourceforge.net/htmldoc/repeat.html#complex-repeat): to register macros
+
+    + [visual.txt](http://vimdoc.sourceforge.net/htmldoc/visual.html "Vim documentation: visual") : Useful visual commands to register macro.
+
+        - [visual-operators](http://vimdoc.sourceforge.net/htmldoc/visual.html#visual-operators) : operators available in Visual mode
+
+
+* **Useful Links :**
+
+    + [Vimcasts.org](http://vimcasts.org/ "A few short videos to love Vim!")
+    + [VimGolf](http://vimgolf.com/ "Real Vim ninjas count every keystroke - do you?")
+    + [Official documentation](http://vimdoc.sourceforge.net/htmldoc/ "This should be the equivalent of :help")
