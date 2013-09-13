@@ -25,10 +25,6 @@
         " Shortcut: <leader>e
         nmap <leader>lcd :lcd %%
 
-        " Launch the generation of tags files
-        " Shortcut: F9
-        nmap <F9> :!ctags -R --c++-kinds=+pl --fields=+iaS --extra=+q -f tags .<CR>
-
         " set makeprg=make\ -j4\ -C\ build\-\$\(eval\ hostname\)
     " }}}
 
@@ -62,24 +58,24 @@
         set wildmode=longest,list
 
         " Look for tags file until the root
-        set tags+=tags;/
+        " set tags+=tags;/
         
         setlocal omnifunc=syntaxcomplete#Complete
     " }}}
     
-    " Functions: {{{
-        " Set all tab settings at once :
-        " Function: :Stab
-        command! -nargs=* Stab call Stab()
-        function! Stab()
-            let l:tabstop = 1 * input('set tabstop = softtabstop = shiftwidth = ')
-            if l:tabstop > 0
-                let &l:tabstop     = l:tabstop
-                let &l:softtabstop = l:tabstop
-                let &l:shiftwidth  = l:tabstop
-            endif
-        endfunction
-    " }}}
+    " " Functions: {{{
+    "     " Set all tab settings at once :
+    "     " Function: :Stab
+    "     command! -nargs=* Stab call Stab()
+    "     function! Stab()
+    "         let l:tabstop = 1 * input('set tabstop = softtabstop = shiftwidth = ')
+    "         if l:tabstop > 0
+    "             let &l:tabstop     = l:tabstop
+    "             let &l:softtabstop = l:tabstop
+    "             let &l:shiftwidth  = l:tabstop
+    "         endif
+    "     endfunction
+    " " }}}
 " }}}
 
 " Vim Plugins: {{{
@@ -119,17 +115,6 @@
             let g:session_autoload = 'yes'
             let g:session_default_to_last = 1
             let g:session_autosave = 'yes'
-        " }}}
-    " }}}
-
-    " Taglist: {{{
-        " Mappings: {{{
-            nmap <F6> :TlistToggle<CR>
-        " }}}   
-
-        " Options: {{{
-            let Tlist_Exit_OnlyWindow = 1
-            let Tlist_File_Fold_Auto_Close = 1
         " }}}
     " }}}
 " }}}
