@@ -16,6 +16,13 @@
 ### Completion
 - **supertab:**         improve completion by pressing TAB
 
+### Tags
+- **easytags:**         generate tags
+- **tagbar:**           display tags
+
+### Navigation
+- **ctrlp:**            navigate between files, tags, buffers,...
+
 ### Easy life
 - **surround:**         handle tags, brackets,...
 
