@@ -7,7 +7,6 @@
 
 ### Session
 - **session:**          save all your opened files tabs and so on in a session
-- **vim-misc:**         library needed for the session plugin
 
 ### History
 - **gundo:**            add powerful undo capacity
@@ -35,4 +34,4 @@
 
 ## Mandatory
 - **pathogen:**         handle submodule plugins
-
+- **vim-misc:**         library needed for the easytags and session plugins
