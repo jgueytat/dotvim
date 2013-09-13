@@ -1,0 +1,33 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+%%	/auto/sop-nas2a/u/sop-nas2a/vol/home_stars/jgueytat/.vim/vimrc	/^        cnoremap %% <C-R>=expand('%:h').'\/'<CR>$/;"	m	language:Vim
+<F5>	/auto/sop-nas2a/u/sop-nas2a/vol/home_stars/jgueytat/.vim/vimrc	/^        nmap <F5> :GundoToggle<CR>$/;"	m	language:Vim
+<F8>	/auto/sop-nas2a/u/sop-nas2a/vol/home_stars/jgueytat/.vim/vimrc	/^        nmap <F8> :TagbarToggle<CR>$/;"	m	language:Vim
+clone	/auto/sop-nas2a/u/sop-nas2a/vol/home_stars/jgueytat/project/sup/src/supCore/supAbstractDataCalibration.cpp	/^supAbstractDataCalibration *supAbstractDataCalibration::clone(void)$/;"	f	language:C++	class:supAbstractDataCalibration
+compute_3d_height	/auto/sop-nas2a/u/sop-nas2a/vol/home_stars/jgueytat/project/sup/src/supCore/supAbstractDataCalibration.cpp	/^double supAbstractDataCalibration::compute_3d_height(cv::Point2i ptlow_2d, double height_2d, double ground[4]) const$/;"	f	language:C++	class:supAbstractDataCalibration
+copy	/auto/sop-nas2a/u/sop-nas2a/vol/home_stars/jgueytat/project/sup/src/supCore/supAbstractDataCalibration.cpp	/^void supAbstractDataCalibration::copy(const dtkAbstractObject& other)$/;"	f	language:C++	class:supAbstractDataCalibration
+g:easytags_file	/auto/sop-nas2a/u/sop-nas2a/vol/home_stars/jgueytat/.vim/vimrc	/^        let g:easytags_file = '~\/.vim\/tags\/tags'$/;"	v	language:Vim
+g:session_autoload	/auto/sop-nas2a/u/sop-nas2a/vol/home_stars/jgueytat/.vim/vimrc	/^        let g:session_autoload = 'no'$/;"	v	language:Vim
+getCalibration	/auto/sop-nas2a/u/sop-nas2a/vol/home_stars/jgueytat/project/sup/src/supCore/supAbstractDataCalibration.cpp	/^cv::Mat supAbstractDataCalibration::getCalibration() const$/;"	f	language:C++	class:supAbstractDataCalibration
+getDistortionMatrix	/auto/sop-nas2a/u/sop-nas2a/vol/home_stars/jgueytat/project/sup/src/supCore/supAbstractDataCalibration.cpp	/^const cv::Mat& supAbstractDataCalibration::getDistortionMatrix() const$/;"	f	language:C++	class:supAbstractDataCalibration
+getExtrinsicMatrix	/auto/sop-nas2a/u/sop-nas2a/vol/home_stars/jgueytat/project/sup/src/supCore/supAbstractDataCalibration.cpp	/^const cv::Mat& supAbstractDataCalibration::getExtrinsicMatrix() const$/;"	f	language:C++	class:supAbstractDataCalibration
+getIntrinsicMatrix	/auto/sop-nas2a/u/sop-nas2a/vol/home_stars/jgueytat/project/sup/src/supCore/supAbstractDataCalibration.cpp	/^const cv::Mat& supAbstractDataCalibration::getIntrinsicMatrix() const$/;"	f	language:C++	class:supAbstractDataCalibration
+getPosition	/auto/sop-nas2a/u/sop-nas2a/vol/home_stars/jgueytat/project/sup/src/supCore/supAbstractDataCalibration.cpp	/^cv::Point3d supAbstractDataCalibration::getPosition() const$/;"	f	language:C++	class:supAbstractDataCalibration
+getReferentialName	/auto/sop-nas2a/u/sop-nas2a/vol/home_stars/jgueytat/project/sup/src/supCore/supAbstractDataCalibration.cpp	/^const QString& supAbstractDataCalibration::getReferentialName() const$/;"	f	language:C++	class:supAbstractDataCalibration
+identifier	/auto/sop-nas2a/u/sop-nas2a/vol/home_stars/jgueytat/project/sup/src/supCore/supAbstractDataCalibration.cpp	/^QString supAbstractDataCalibration::identifier(void) const$/;"	f	language:C++	class:supAbstractDataCalibration
+imageToWorld	/auto/sop-nas2a/u/sop-nas2a/vol/home_stars/jgueytat/project/sup/src/supCore/supAbstractDataCalibration.cpp	/^cv::Point3d supAbstractDataCalibration::imageToWorld(const cv::Point2d i_pos2d, double i_h) const$/;"	f	language:C++	class:supAbstractDataCalibration
+mapleader	/auto/sop-nas2a/u/sop-nas2a/vol/home_stars/jgueytat/.vim/vimrc	/^        let mapleader = ";"$/;"	v	language:Vim
+operator =	/auto/sop-nas2a/u/sop-nas2a/vol/home_stars/jgueytat/project/sup/src/supCore/supAbstractDataCalibration.cpp	/^supAbstractDataCalibration& supAbstractDataCalibration::operator = (const supAbstractDataCalibration& other)$/;"	f	language:C++	class:supAbstractDataCalibration
+read	/auto/sop-nas2a/u/sop-nas2a/vol/home_stars/jgueytat/project/sup/src/supCore/supAbstractDataCalibration.cpp	/^bool supAbstractDataCalibration::read(const QString& file)$/;"	f	language:C++	class:supAbstractDataCalibration
+setDistortionMatrix	/auto/sop-nas2a/u/sop-nas2a/vol/home_stars/jgueytat/project/sup/src/supCore/supAbstractDataCalibration.cpp	/^void supAbstractDataCalibration::setDistortionMatrix(const cv::Mat& i_distortion)$/;"	f	language:C++	class:supAbstractDataCalibration
+setExtrinsicMatrix	/auto/sop-nas2a/u/sop-nas2a/vol/home_stars/jgueytat/project/sup/src/supCore/supAbstractDataCalibration.cpp	/^void supAbstractDataCalibration::setExtrinsicMatrix(const cv::Mat& i_extrinsic)$/;"	f	language:C++	class:supAbstractDataCalibration
+setIntrinsicMatrix	/auto/sop-nas2a/u/sop-nas2a/vol/home_stars/jgueytat/project/sup/src/supCore/supAbstractDataCalibration.cpp	/^void supAbstractDataCalibration::setIntrinsicMatrix(const cv::Mat& i_intrinsic)$/;"	f	language:C++	class:supAbstractDataCalibration
+setReferentialName	/auto/sop-nas2a/u/sop-nas2a/vol/home_stars/jgueytat/project/sup/src/supCore/supAbstractDataCalibration.cpp	/^void supAbstractDataCalibration::setReferentialName(const QString& i_referentialName)$/;"	f	language:C++	class:supAbstractDataCalibration
+supAbstractDataCalibration	/auto/sop-nas2a/u/sop-nas2a/vol/home_stars/jgueytat/project/sup/src/supCore/supAbstractDataCalibration.cpp	/^supAbstractDataCalibration::supAbstractDataCalibration(const supAbstractDataCalibration& other) : supAbstractData(*new supAbstractDataCalibrationPrivate(*other.d_func()), other) {}$/;"	f	language:C++	class:supAbstractDataCalibration
+supAbstractDataCalibration	/auto/sop-nas2a/u/sop-nas2a/vol/home_stars/jgueytat/project/sup/src/supCore/supAbstractDataCalibration.cpp	/^supAbstractDataCalibration::supAbstractDataCalibration(void) : supAbstractData(*new supAbstractDataCalibrationPrivate(this), 0) {}$/;"	f	language:C++	class:supAbstractDataCalibration
+worldToImage	/auto/sop-nas2a/u/sop-nas2a/vol/home_stars/jgueytat/project/sup/src/supCore/supAbstractDataCalibration.cpp	/^cv::Point2d supAbstractDataCalibration::worldToImage(const cv::Point3d i_pos3d) const$/;"	f	language:C++	class:supAbstractDataCalibration
+~supAbstractDataCalibration	/auto/sop-nas2a/u/sop-nas2a/vol/home_stars/jgueytat/project/sup/src/supCore/supAbstractDataCalibration.cpp	/^supAbstractDataCalibration::~supAbstractDataCalibration(void) {}$/;"	f	language:C++	class:supAbstractDataCalibration
