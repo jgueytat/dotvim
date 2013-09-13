@@ -80,7 +80,7 @@
 
 " Vim Plugins: {{{
     " Pathogen: {{{
-        runtime plugins-enabled/pathogen/autoload/pathogen.vim
+        runtime plugins-available/pathogen/autoload/pathogen.vim
         call pathogen#infect('plugins-enabled/{}')
     " }}}
 

@@ -28,8 +28,8 @@
 [submodule "plugins-available/ctrlp"]
 	path = plugins-available/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
-[submodule "plugins-available/easytags.vim"]
-	path = plugins-available/easytags.vim
+[submodule "plugins-available/easytags"]
+	path = plugins-available/easytags
 	url = https://github.com/vim-scripts/easytags.vim.git
 [submodule "plugins-available/tagbar"]
 	path = plugins-available/tagbar
