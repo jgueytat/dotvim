@@ -3,7 +3,7 @@
 ##
 
 ### Git
-- **fugitive:**         use Git inside Vim
+- **[fugitive](https://github.com/tpope/vim-fugitive):**         use Git inside Vim
 
 ### Session
 - **session:**          save all your opened files tabs and so on in a session
