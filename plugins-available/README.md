@@ -12,10 +12,10 @@
 - **[gundo](https://github.com/sjl/gundo.vim):**            add powerful undo capacity, [screencast](http://vimcasts.org/episodes/undo-branching-and-gundo-vim/)
 
 ### Completion ( :help ins-completion )
-- **[supertab](https://github.com/ervandew/supertab):**         improve completion by pressing TAB
+- **[supertab](https://github.com/ervandew/supertab):**         replace the Ctrl-X maping
 
 ### Tags ( :help tags-and-searches )
-- **[tagbar](https://github.com/majutsushi/tagbar):**           navigate easily through the tags
+- **[tagbar](https://github.com/majutsushi/tagbar):**           display tags of the current file
 
 ### Navigation
 - **[ctrlp](https://github.com/kien/ctrlp.vim):**            navigate between files, tags, buffers,...
