@@ -14,14 +14,11 @@
 ### Completion ( :help ins-completion )
 - **[supertab](https://github.com/ervandew/supertab):**         improve completion by pressing TAB
 
-### Tags
+### Tags ( :help tags-and-searches )
 - **[tagbar](https://github.com/majutsushi/tagbar):**           navigate easily through the tags
 
 ### Navigation
 - **[ctrlp](https://github.com/kien/ctrlp.vim):**            navigate between files, tags, buffers,...
-
-### Easy life
-- **[surround](https://github.com/vim-scripts/surround.vim):**         handle tags, brackets,... Does not work well with the layout US International.
 
 ## Langage dependant
 
