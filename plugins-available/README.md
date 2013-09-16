@@ -3,35 +3,35 @@
 ##
 
 ### Git
-- **[fugitive](https://github.com/tpope/vim-fugitive):**         use Git inside Vim
+- **[fugitive](https://github.com/tpope/vim-fugitive):**        use Git inside Vim
 
 ### Session
-- **session:**          save all your opened files tabs and so on in a session
+- **[session](https://github.com/xolox/vim-session):**          save all your opened files tabs and so on in a session
 
 ### History
-- **gundo:**            add powerful undo capacity
+- **[gundo](https://github.com/sjl/gundo.vim):**            add powerful undo capacity
 
 ### Completion
-- **supertab:**         improve completion by pressing TAB
+- **[supertab](https://github.com/ervandew/supertab):**         improve completion by pressing TAB
 
 ### Tags
-- **easytags:**         update the tags
-- **tagbar:**           navigate easily through the tags
+- **[easytags](https://github.com/vim-scripts/easytags.vim):**         update the tags
+- **[tagbar](https://github.com/majutsushi/tagbar):**           navigate easily through the tags
 
 ### Navigation
-- **ctrlp:**            navigate between files, tags, buffers,...
+- **[ctrlp](https://github.com/kien/ctrlp.vim):**            navigate between files, tags, buffers,...
 
 ### Easy life
-- **surround:**         handle tags, brackets,...
+- **[surround](https://github.com/vim-scripts/surround.vim):**         handle tags, brackets,...
 
 ## Langage dependant
 
 ### C++
-- **OmniCppComplete:**  add C++ auto-completion
+- **[OmniCppComplete](https://github.com/vim-scripts/OmniCppComplete):**  add C++ auto-completion
 
 ### HTML
-- **Emmet:**            write HTML code at the speed of light
+- **[Emmet](https://github.com/vim-scripts/Emmet.vim):**            write HTML code at the speed of light
 
 ## Mandatory
-- **pathogen:**         handle submodule plugins
-- **vim-misc:**         library needed for the easytags and session plugins
+- **[pathogen](https://github.com/tpope/vim-pathogen):**         handle submodule plugins
+- **[vim-misc](https://github.com/vim-scripts/vim-misc):**         library needed for the easytags and session plugins
