@@ -9,7 +9,7 @@
 - **[session](https://github.com/xolox/vim-session):**          save all your opened files tabs and so on in a session
 
 ### History
-- **[gundo](https://github.com/sjl/gundo.vim):**            add powerful undo capacity
+- **[gundo](https://github.com/sjl/gundo.vim):**            add powerful undo capacity, [screencast](ttp://vimcasts.org/episodes/undo-branching-and-gundo-vim/)
 
 ### Completion
 - **[supertab](https://github.com/ervandew/supertab):**         improve completion by pressing TAB
