@@ -5,11 +5,10 @@
 ### Git
 - **[fugitive](https://github.com/tpope/vim-fugitive)**:        use Git inside Vim
 
-### Session
+### Session ( :help views-sessions )
 - **[session](https://github.com/xolox/vim-session)**:          save all your opened files tabs and so on in a session
-- **:help views-sessions**: you can use views and sessions instead 
 
-### History
+### History ( :help undo-redo )
 - **[gundo](https://github.com/sjl/gundo.vim):**            add powerful undo capacity, [screencast](http://vimcasts.org/episodes/undo-branching-and-gundo-vim/)
 
 ### Completion
