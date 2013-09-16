@@ -6,7 +6,7 @@
 - **[fugitive](https://github.com/tpope/vim-fugitive):**        use Git inside Vim
 
 ### Session
-- **[session](https://github.com/xolox/vim-session):**          save all your opened files tabs and so on in a session, you can use :mksession nuilt-in also.
+- **[session](https://github.com/xolox/vim-session):**          save all your opened files tabs and so on in a session, you can use **:mksession** nuilt-in also.
 
 ### History
 - **[gundo](https://github.com/sjl/gundo.vim):**            add powerful undo capacity, [screencast](http://vimcasts.org/episodes/undo-branching-and-gundo-vim/)
