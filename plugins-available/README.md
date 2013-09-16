@@ -11,7 +11,7 @@
 ### History ( :help undo-redo )
 - **[gundo](https://github.com/sjl/gundo.vim):**            add powerful undo capacity, [screencast](http://vimcasts.org/episodes/undo-branching-and-gundo-vim/)
 
-### Completion
+### Completion ( :help ins-completion )
 - **[supertab](https://github.com/ervandew/supertab):**         improve completion by pressing TAB
 
 ### Tags
