@@ -3,26 +3,22 @@
 ##
 
 ### Git
-- **[fugitive](https://github.com/tpope/vim-fugitive):**        use Git inside Vim
+- **[fugitive](https://github.com/tpope/vim-fugitive)**:        use Git inside Vim
 
-### Session
-- **[session](https://github.com/xolox/vim-session):**          save all your opened files tabs and so on in a session
+### Session ( :help views-sessions )
+- **[session](https://github.com/xolox/vim-session)**:          save all your opened files tabs and so on in a session
 
-### History
-- **[gundo](https://github.com/sjl/gundo.vim):**            add powerful undo capacity
+### History ( :help undo-redo )
+- **[gundo](https://github.com/sjl/gundo.vim):**            add powerful undo capacity, [screencast](http://vimcasts.org/episodes/undo-branching-and-gundo-vim/)
 
-### Completion
-- **[supertab](https://github.com/ervandew/supertab):**         improve completion by pressing TAB
+### Completion ( :help ins-completion )
+- **[supertab](https://github.com/ervandew/supertab):**         replace the Ctrl-X maping
 
-### Tags
-- **[easytags](https://github.com/vim-scripts/easytags.vim):**         update the tags
-- **[tagbar](https://github.com/majutsushi/tagbar):**           navigate easily through the tags
+### Tags ( :help tags-and-searches )
+- **[tagbar](https://github.com/majutsushi/tagbar):**           display tags of the current file
 
 ### Navigation
 - **[ctrlp](https://github.com/kien/ctrlp.vim):**            navigate between files, tags, buffers,...
-
-### Easy life
-- **[surround](https://github.com/vim-scripts/surround.vim):**         handle tags, brackets,...
 
 ## Langage dependant
 
