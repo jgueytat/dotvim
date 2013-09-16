@@ -42,6 +42,11 @@
         " Enhance display
         set wildmenu
         set wildmode=longest,list
+
+        " Tags
+        set tags=./tags;
+        set tags+=~/.vim/tags/Qt.tags;
+        set tags+=~/.vim/tags/STL.tags;
     " }}}
     
     " Functions: {{{
@@ -70,13 +75,11 @@
                 \    setlocal omnifunc=syntaxcomplete#Complete |
                 \ endif 
         endif 
+        let OmniCpp_SelectFirstItem = 2
+        let OmniCpp_MayCompleteScope = 1
     " }}}
 
     " CtrlP: {{{
-    " }}}
-
-    " EasyTags: {{{
-        let g:easytags_file = '~/.vim/tags/tags'
     " }}}
 
     " Fugitive: {{{
@@ -93,9 +96,6 @@
 
     " Session: {{{
         let g:session_autoload = 'no'
-    " }}}
-
-    " Surround: {{{
     " }}}
 
     " TagBar: {{{
