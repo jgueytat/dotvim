@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Dotvim by jgueytat</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/jgueytat/dotvim">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/jgueytat/dotvim/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/jgueytat/dotvim/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Dotvim</h1>
+          <p>Vim configuration directory. Only use the best Vim plugins available on Github. See the plugins/README.md file to check the plugins' list.</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/jgueytat">jgueytat</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a name="" class="anchor" href="#"><span class="octicon octicon-link"></span></a><img src="http://upload.wikimedia.org/wikipedia/commons/4/4f/Icon-Vim.svg" alt="dotvim">
+</h1>
+
+<p>This repository is the content of my <strong>.vim</strong> directory. Basically I'm only playing with existing plugins. I just add them as submodule and configure them in my <strong>.vimrc</strong> file.
+You can do already do everything with Vim. Plugins can add new mapings to learn. You should first ask if you can do an action without the plugin you're about to install.</p>
+
+<h2>
+<a name="play-with-the-vim-plugins" class="anchor" href="#play-with-the-vim-plugins"><span class="octicon octicon-link"></span></a>Play with the Vim plugins</h2>
+
+<h3>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h3>
+
+<p><strong>Clone the repository :</strong></p>
+
+<div class="highlight highlight-Bash"><pre>git clone git://github.com/jgueytat/dotvim.git ~/.vim
+</pre></div>
+
+<p><strong>Get the plugins :</strong></p>
+
+<div class="highlight highlight-Bash"><pre><span class="nb">cd</span> ~/.vim <span class="o">&amp;&amp;</span>
+git submodule init <span class="o">&amp;&amp;</span>
+git submodule update
+</pre></div>
+
+<p><strong>Create symlinks :</strong></p>
+
+<div class="highlight highlight-Bash"><pre>ln -s ~/.vim/vimrc ~/.vimrc
+</pre></div>
+
+<h3>
+<a name="update" class="anchor" href="#update"><span class="octicon octicon-link"></span></a>Update</h3>
+
+<p><strong>Update your repository :</strong></p>
+
+<div class="highlight highlight-Bash"><pre><span class="nb">cd</span> ~/.vim <span class="o">&amp;&amp;</span>
+git pull origin master
+</pre></div>
+
+<p><strong>Update all plugins :</strong></p>
+
+<div class="highlight highlight-Bash"><pre>git submodule foreach git pull origin master
+</pre></div>
+
+<h3>
+<a name="add-a-plugin" class="anchor" href="#add-a-plugin"><span class="octicon octicon-link"></span></a>Add a plugin</h3>
+
+<p>Don't forget to replace <strong>GIT_URL_REPOSITORY</strong> and <strong>PLUGIN_NAME.</strong></p>
+
+<div class="highlight highlight-Bash"><pre><span class="nb">cd</span> ~/.vim
+git submodule add GIT_URL_REPOSITORY plugins-available/PLUGIN_NAME
+git commit -m <span class="s2">"The plugin PLUGIN_NAME has been added."</span>
+</pre></div>
+
+<h3>
+<a name="remove-a-plugin" class="anchor" href="#remove-a-plugin"><span class="octicon octicon-link"></span></a>Remove a plugin</h3>
+
+<p><strong>From Git :</strong></p>
+
+<div class="highlight highlight-Bash"><pre><span class="nb">export </span><span class="nv">PLUGIN_NAME_TO_REMOVE</span><span class="o">=</span>SET_PLUGIN_NAME_TO_REMOVE_HERE
+</pre></div>
+
+<div class="highlight highlight-Bash"><pre><span class="nb">cd</span> ~/.vim <span class="o">&amp;&amp;</span>
+mv .git/config .git/config-old; cat .git/config-old | grep -v <span class="k">${</span><span class="nv">PLUGIN_NAME_TO_REMOVE</span><span class="k">}</span> &gt; .git/config; rm .git/config-old <span class="o">&amp;&amp;</span>
+mv .gitmodules .gitmodules-old; cat .gitmodules-old | grep -v <span class="k">${</span><span class="nv">PLUGIN_NAME_TO_REMOVE</span><span class="k">}</span> &gt; .gitmodules; rm .gitmodules-old <span class="o">&amp;&amp;</span>
+git add .gitmodules <span class="o">&amp;&amp;</span>
+git rm --cached plugins-available/<span class="k">${</span><span class="nv">PLUGIN_NAME_TO_REMOVE</span><span class="k">}</span> <span class="o">&amp;&amp;</span>
+git rm plugins-enabled/<span class="k">${</span><span class="nv">PLUGIN_NAME_TO_REMOVE</span><span class="k">}</span> <span class="o">&amp;&amp;</span>
+git commit -m <span class="s2">"The plugin ${PLUGIN_NAME_TO_REMOVE} has been removed."</span>
+
+</pre></div>
+
+<p><strong>From FileSystem :</strong></p>
+
+<div class="highlight highlight-Bash"><pre>rm -rf ~/.vim/plugins-available/<span class="k">${</span><span class="nv">PLUGIN_NAME_TO_REMOVE</span><span class="k">}</span>
+</pre></div>
+
+<h3>
+<a name="enable-a-plugin" class="anchor" href="#enable-a-plugin"><span class="octicon octicon-link"></span></a>Enable a plugin</h3>
+
+<p><strong>Create the link in plugins-enabled :</strong></p>
+
+<div class="highlight highlight-Bash"><pre><span class="nb">cd</span> ~/.vim/plugins-enabled
+ln -s ../plugins-available/PLUGIN_NAME .
+</pre></div>
+
+<h3>
+<a name="disable-a-plugin" class="anchor" href="#disable-a-plugin"><span class="octicon octicon-link"></span></a>Disable a plugin</h3>
+
+<div class="highlight highlight-Bash"><pre>rm ~/.vim/plugins-enabled/PLUGIN_NAME
+</pre></div>
+
+<h2>
+<a name="learn-more-about-vim" class="anchor" href="#learn-more-about-vim"><span class="octicon octicon-link"></span></a>Learn more about Vim</h2>
+
+<ul>
+<li><p><strong>vimtutor :</strong> Go through this tutorial. This is the only place to begin with Vim.</p></li>
+<li>
+<p><strong>:help cmd :</strong> In Vim type <strong>:help cmd</strong> to know more about the "cmd" command.</p>
+
+<ul>
+<li>
+<p><a href="http://vimdoc.sourceforge.net/htmldoc/motion.html" title="Vim documentation: motion">motion.txt</a> : Learn to move fast.</p>
+
+<ul>
+<li>
+<a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#text-objects">text-obect</a>: use to specify text selection</li>
+<li>
+<a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#mark">m</a>: to mark a point in a file</li>
+</ul>
+</li>
+<li>
+<p><a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html" title="Vim documentation: repeat">repeat.txt</a> : Do not repeat yourself.</p>
+
+<ul>
+<li>
+<a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#complex-repeat">q</a>: to register macros</li>
+</ul>
+</li>
+<li>
+<p><a href="http://vimdoc.sourceforge.net/htmldoc/visual.html" title="Vim documentation: visual">visual.txt</a> : Useful visual commands to register macro.</p>
+
+<ul>
+<li>
+<a href="http://vimdoc.sourceforge.net/htmldoc/visual.html#visual-operators">visual-operators</a> : operators available in Visual mode</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Useful Links :</strong></p>
+
+<ul>
+<li>
+<a href="http://vimcasts.org/">Vimcasts.org</a>: A few short screencasts to love Vim!</li>
+<li>
+<a href="http://vimgolf.com/">VimGolf</a>: "Real Vim ninjas count every keystroke - do you?" Learn Vim by playing!</li>
+<li>
+<a href="http://vimdoc.sourceforge.net/htmldoc/">Official documentation</a>: This should be the equivalent of :help</li>
+</ul>
+</li>
+</ul>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
