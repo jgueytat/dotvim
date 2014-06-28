@@ -19,12 +19,12 @@
 [submodule "plugins-available/vim-misc"]
 	path = plugins-available/vim-misc
 	url = https://github.com/vim-scripts/vim-misc
-[submodule "plugins-available/surround"]
-	path = plugins-available/surround
-	url = https://github.com/vim-scripts/surround.vim
 [submodule "plugins-available/Emmet"]
 	path = plugins-available/Emmet
 	url = https://github.com/vim-scripts/Emmet.vim
 [submodule "plugins-available/ctrlp"]
 	path = plugins-available/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
+[submodule "plugins-available/tagbar"]
+	path = plugins-available/tagbar
+	url = https://github.com/majutsushi/tagbar.git

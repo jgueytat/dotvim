@@ -1,24 +1,34 @@
-## Plugins' selection
+# Plugins' selection
 
-### Mandatory
-- **pathogen:**         handle submodule plugins
+Most of the plugins have an equivalent implemented in Vim. You should only use the plugins that brings you new functionalities.
 
 ### Git
-- **fugitive:**         use Git inside Vim
 
-### Session
-- **session:**          add :OpenSession and :SaveSession functionalities
-- **vim-misc:**         library needed for the session plugin
+- **[fugitive](https://github.com/tpope/vim-fugitive)**: Use Git inside Vim.
 
-### History
-- **gundo:**            add powerful undo capacity
+### Session ( :help views-sessions )
+- **[session](https://github.com/xolox/vim-session)**: Easier way to handle sessions.
 
-### Completion
-- **supertab:**         improve completion by pressing TAB
+### History ( :help undo-redo )
+- **[gundo](https://github.com/sjl/gundo.vim):**  Display the undo functionality in a split. Checkout this [screencast](http://vimcasts.org/episodes/undo-branching-and-gundo-vim/).
 
-### Easy life
-- **surround:**         handle tags, brackets,...
+### Completion ( :help ins-completion )
+- **[supertab](https://github.com/ervandew/supertab):** Replace the Ctrl-X maping.
 
-### Langage dependant
-- **OmniCppComplete:**  add C++ auto-completion ( **C++** )
-- **Emmet:**            write HTML code at the speed of light ( **HTML** )
+### Tags ( :help tags-and-searches )
+- **[tagbar](https://github.com/majutsushi/tagbar):** Display tags of the current file.
+
+### Navigation
+- **[ctrlp](https://github.com/kien/ctrlp.vim):** Navigate between files, tags, buffers,...
+
+## Langage dependant
+
+### C++
+- **[OmniCppComplete](https://github.com/vim-scripts/OmniCppComplete):**  Add C++ auto-completion.
+
+### HTML
+- **[Emmet](https://github.com/vim-scripts/Emmet.vim):** "Write HTML code at the speed of light.".
+
+## Mandatory
+- **[pathogen](https://github.com/tpope/vim-pathogen):** Handle submodule plugins.
+- **[vim-misc](https://github.com/vim-scripts/vim-misc):** Library needed for the session plugin.

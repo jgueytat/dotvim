@@ -1,6 +1,7 @@
 # ![dotvim](http://upload.wikimedia.org/wikipedia/commons/4/4f/Icon-Vim.svg)
 
 This repository is the content of my **.vim** directory. Basically I'm only playing with existing plugins. I just add them as submodule and configure them in my **.vimrc** file.
+You can do already do everything with Vim. Plugins can add new mapings to learn. You should first ask if you can do an action without the plugin you're about to install.
 
 ## Play with the Vim plugins
 
@@ -112,6 +113,6 @@ rm ~/.vim/plugins-enabled/PLUGIN_NAME
 
 * **Useful Links :**
 
-    + [Vimcasts.org](http://vimcasts.org/ "A few short videos to love Vim!")
-    + [VimGolf](http://vimgolf.com/ "Real Vim ninjas count every keystroke - do you?")
-    + [Official documentation](http://vimdoc.sourceforge.net/htmldoc/ "This should be the equivalent of :help")
+    + [Vimcasts.org](http://vimcasts.org/): A few short screencasts to love Vim!
+    + [VimGolf](http://vimgolf.com/): "Real Vim ninjas count every keystroke - do you?" Learn Vim by playing!
+    + [Official documentation](http://vimdoc.sourceforge.net/htmldoc/): This should be the equivalent of :help
