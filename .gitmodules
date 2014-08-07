@@ -28,3 +28,6 @@
 [submodule "plugins-available/tagbar"]
 	path = plugins-available/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+[submodule "plugins-available/editorconfig"]
+	path = plugins-available/editorconfig
+	url = https://github.com/editorconfig/editorconfig-vim.git
