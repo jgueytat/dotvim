@@ -1,137 +1,119 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Dotvim by jgueytat</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Dotvim : Vim configuration directory. Only use the best Vim plugins available on Github. See the plugins/README.md file to check the plugins&#39; list.">
 
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Dotvim</title>
   </head>
+
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/jgueytat/dotvim">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/jgueytat/dotvim/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/jgueytat/dotvim/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
 
-    <div class="wrapper">
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jgueytat/dotvim">View on GitHub</a>
 
-      <section>
-        <div id="title">
-          <h1>Dotvim</h1>
-          <p>Vim configuration directory. Only use the best Vim plugins available on Github. See the plugins/README.md file to check the plugins' list.</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/jgueytat">jgueytat</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
+          <h1 id="project_title">Dotvim</h1>
+          <h2 id="project_tagline">Vim configuration directory. Only use the best Vim plugins available on Github. See the plugins/README.md file to check the plugins&#39; list.</h2>
 
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/jgueytat/dotvim/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/jgueytat/dotvim/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h1>
-<a name="" class="anchor" href="#"><span class="octicon octicon-link"></span></a><img src="http://upload.wikimedia.org/wikipedia/commons/4/4f/Icon-Vim.svg" alt="dotvim">
+<a id="" class="anchor" href="#" aria-hidden="true"><span class="octicon octicon-link"></span></a><img src="http://upload.wikimedia.org/wikipedia/commons/4/4f/Icon-Vim.svg" alt="dotvim">
 </h1>
 
 <p>This repository is the content of my <strong>.vim</strong> directory. Basically I'm only playing with existing plugins. I just add them as submodule and configure them in my <strong>.vimrc</strong> file.
 You can do already do everything with Vim. Plugins can add new mapings to learn. You should first ask if you can do an action without the plugin you're about to install.</p>
 
 <h2>
-<a name="play-with-the-vim-plugins" class="anchor" href="#play-with-the-vim-plugins"><span class="octicon octicon-link"></span></a>Play with the Vim plugins</h2>
+<a id="play-with-the-vim-plugins" class="anchor" href="#play-with-the-vim-plugins" aria-hidden="true"><span class="octicon octicon-link"></span></a>Play with the Vim plugins</h2>
 
 <h3>
-<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h3>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h3>
 
 <p><strong>Clone the repository :</strong></p>
 
-<div class="highlight highlight-Bash"><pre>git clone git://github.com/jgueytat/dotvim.git ~/.vim
-</pre></div>
+<div class="highlight highlight-Bash"><pre>git clone git://github.com/jgueytat/dotvim.git <span class="pl-k">~</span>/.vim</pre></div>
 
 <p><strong>Get the plugins :</strong></p>
 
-<div class="highlight highlight-Bash"><pre><span class="nb">cd</span> ~/.vim <span class="o">&amp;&amp;</span>
-git submodule init <span class="o">&amp;&amp;</span>
-git submodule update
-</pre></div>
+<div class="highlight highlight-Bash"><pre><span class="pl-s3">cd</span> <span class="pl-k">~</span>/.vim <span class="pl-k">&amp;&amp;</span>
+git submodule init <span class="pl-k">&amp;&amp;</span>
+git submodule update</pre></div>
 
 <p><strong>Create symlinks :</strong></p>
 
-<div class="highlight highlight-Bash"><pre>ln -s ~/.vim/vimrc ~/.vimrc
-</pre></div>
+<div class="highlight highlight-Bash"><pre>ln -s <span class="pl-k">~</span>/.vim/vimrc <span class="pl-k">~</span>/.vimrc</pre></div>
 
 <h3>
-<a name="update" class="anchor" href="#update"><span class="octicon octicon-link"></span></a>Update</h3>
+<a id="update" class="anchor" href="#update" aria-hidden="true"><span class="octicon octicon-link"></span></a>Update</h3>
 
 <p><strong>Update your repository :</strong></p>
 
-<div class="highlight highlight-Bash"><pre><span class="nb">cd</span> ~/.vim <span class="o">&amp;&amp;</span>
-git pull origin master
-</pre></div>
+<div class="highlight highlight-Bash"><pre><span class="pl-s3">cd</span> <span class="pl-k">~</span>/.vim <span class="pl-k">&amp;&amp;</span>
+git pull origin master</pre></div>
 
 <p><strong>Update all plugins :</strong></p>
 
-<div class="highlight highlight-Bash"><pre>git submodule foreach git pull origin master
-</pre></div>
+<div class="highlight highlight-Bash"><pre>git submodule foreach git pull origin master</pre></div>
 
 <h3>
-<a name="add-a-plugin" class="anchor" href="#add-a-plugin"><span class="octicon octicon-link"></span></a>Add a plugin</h3>
+<a id="add-a-plugin" class="anchor" href="#add-a-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add a plugin</h3>
 
 <p>Don't forget to replace <strong>GIT_URL_REPOSITORY</strong> and <strong>PLUGIN_NAME.</strong></p>
 
-<div class="highlight highlight-Bash"><pre><span class="nb">cd</span> ~/.vim
+<div class="highlight highlight-Bash"><pre><span class="pl-s3">cd</span> <span class="pl-k">~</span>/.vim
 git submodule add GIT_URL_REPOSITORY plugins-available/PLUGIN_NAME
-git commit -m <span class="s2">"The plugin PLUGIN_NAME has been added."</span>
-</pre></div>
+git commit -m <span class="pl-s1"><span class="pl-pds">"</span>The plugin PLUGIN_NAME has been added.<span class="pl-pds">"</span></span></pre></div>
 
 <h3>
-<a name="remove-a-plugin" class="anchor" href="#remove-a-plugin"><span class="octicon octicon-link"></span></a>Remove a plugin</h3>
+<a id="remove-a-plugin" class="anchor" href="#remove-a-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Remove a plugin</h3>
 
 <p><strong>From Git :</strong></p>
 
-<div class="highlight highlight-Bash"><pre><span class="nb">export </span><span class="nv">PLUGIN_NAME_TO_REMOVE</span><span class="o">=</span>SET_PLUGIN_NAME_TO_REMOVE_HERE
-</pre></div>
+<div class="highlight highlight-Bash"><pre><span class="pl-s">export</span> PLUGIN_NAME_TO_REMOVE=SET_PLUGIN_NAME_TO_REMOVE_HERE</pre></div>
 
-<div class="highlight highlight-Bash"><pre><span class="nb">cd</span> ~/.vim <span class="o">&amp;&amp;</span>
-mv .git/config .git/config-old; cat .git/config-old | grep -v <span class="k">${</span><span class="nv">PLUGIN_NAME_TO_REMOVE</span><span class="k">}</span> &gt; .git/config; rm .git/config-old <span class="o">&amp;&amp;</span>
-mv .gitmodules .gitmodules-old; cat .gitmodules-old | grep -v <span class="k">${</span><span class="nv">PLUGIN_NAME_TO_REMOVE</span><span class="k">}</span> &gt; .gitmodules; rm .gitmodules-old <span class="o">&amp;&amp;</span>
-git add .gitmodules <span class="o">&amp;&amp;</span>
-git rm --cached plugins-available/<span class="k">${</span><span class="nv">PLUGIN_NAME_TO_REMOVE</span><span class="k">}</span> <span class="o">&amp;&amp;</span>
-git rm plugins-enabled/<span class="k">${</span><span class="nv">PLUGIN_NAME_TO_REMOVE</span><span class="k">}</span> <span class="o">&amp;&amp;</span>
-git commit -m <span class="s2">"The plugin ${PLUGIN_NAME_TO_REMOVE} has been removed."</span>
-
+<div class="highlight highlight-Bash"><pre><span class="pl-s3">cd</span> <span class="pl-k">~</span>/.vim <span class="pl-k">&amp;&amp;</span>
+mv .git/config .git/config-old<span class="pl-k">;</span> cat .git/config-old <span class="pl-k">|</span> grep -v <span class="pl-vo">${PLUGIN_NAME_TO_REMOVE}</span> <span class="pl-k">&gt;</span> .git/config<span class="pl-k">;</span> rm .git/config-old <span class="pl-k">&amp;&amp;</span>
+mv .gitmodules .gitmodules-old<span class="pl-k">;</span> cat .gitmodules-old <span class="pl-k">|</span> grep -v <span class="pl-vo">${PLUGIN_NAME_TO_REMOVE}</span> <span class="pl-k">&gt;</span> .gitmodules<span class="pl-k">;</span> rm .gitmodules-old <span class="pl-k">&amp;&amp;</span>
+git add .gitmodules <span class="pl-k">&amp;&amp;</span>
+git rm --cached plugins-available/<span class="pl-vo">${PLUGIN_NAME_TO_REMOVE}</span> <span class="pl-k">&amp;&amp;</span>
+git rm plugins-enabled/<span class="pl-vo">${PLUGIN_NAME_TO_REMOVE}</span> <span class="pl-k">&amp;&amp;</span>
+git commit -m <span class="pl-s1"><span class="pl-pds">"</span>The plugin <span class="pl-vo">${PLUGIN_NAME_TO_REMOVE}</span> has been removed.<span class="pl-pds">"</span></span>
 </pre></div>
 
 <p><strong>From FileSystem :</strong></p>
 
-<div class="highlight highlight-Bash"><pre>rm -rf ~/.vim/plugins-available/<span class="k">${</span><span class="nv">PLUGIN_NAME_TO_REMOVE</span><span class="k">}</span>
-</pre></div>
+<div class="highlight highlight-Bash"><pre>rm -rf <span class="pl-k">~</span>/.vim/plugins-available/<span class="pl-vo">${PLUGIN_NAME_TO_REMOVE}</span></pre></div>
 
 <h3>
-<a name="enable-a-plugin" class="anchor" href="#enable-a-plugin"><span class="octicon octicon-link"></span></a>Enable a plugin</h3>
+<a id="enable-a-plugin" class="anchor" href="#enable-a-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Enable a plugin</h3>
 
 <p><strong>Create the link in plugins-enabled :</strong></p>
 
-<div class="highlight highlight-Bash"><pre><span class="nb">cd</span> ~/.vim/plugins-enabled
-ln -s ../plugins-available/PLUGIN_NAME .
-</pre></div>
+<div class="highlight highlight-Bash"><pre><span class="pl-s3">cd</span> <span class="pl-k">~</span>/.vim/plugins-enabled
+ln -s ../plugins-available/PLUGIN_NAME <span class="pl-s3">.</span></pre></div>
 
 <h3>
-<a name="disable-a-plugin" class="anchor" href="#disable-a-plugin"><span class="octicon octicon-link"></span></a>Disable a plugin</h3>
+<a id="disable-a-plugin" class="anchor" href="#disable-a-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Disable a plugin</h3>
 
-<div class="highlight highlight-Bash"><pre>rm ~/.vim/plugins-enabled/PLUGIN_NAME
-</pre></div>
+<div class="highlight highlight-Bash"><pre>rm <span class="pl-k">~</span>/.vim/plugins-enabled/PLUGIN_NAME</pre></div>
 
 <h2>
-<a name="learn-more-about-vim" class="anchor" href="#learn-more-about-vim"><span class="octicon octicon-link"></span></a>Learn more about Vim</h2>
+<a id="learn-more-about-vim" class="anchor" href="#learn-more-about-vim" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn more about Vim</h2>
 
 <ul>
 <li><p><strong>vimtutor :</strong> Go through this tutorial. This is the only place to begin with Vim.</p></li>
@@ -181,9 +163,17 @@ ln -s ../plugins-available/PLUGIN_NAME .
 </li>
 </ul>
       </section>
-
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Dotvim maintained by <a href="https://github.com/jgueytat">jgueytat</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
     
+
   </body>
 </html>
