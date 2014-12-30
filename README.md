@@ -7,25 +7,24 @@ You can already do everything with Vim. Plugins can add new mapings to learn. Yo
 
 ### Installation
 
-**Clone the repository :**
+1. **Clone the repository :**
+  ```Bash
+  git clone git://github.com/jgueytat/dotvim.git ~/.vim
+  ```
 
-```Bash
-git clone git://github.com/jgueytat/dotvim.git ~/.vim
-```
+2. **Clone the submodules to get the plugins :**
 
-**Clone the submodules to get the plugins :**
+  ```Bash
+  cd ~/.vim &&
+  git submodule init &&
+  git submodule update
+  ```
 
-```Bash
-cd ~/.vim &&
-git submodule init &&
-git submodule update
-```
+3. **Create symlinks :**
 
-**Create symlinks :**
-
-```Bash
-ln -s ~/.vim/vimrc ~/.vimrc
-```
+  ```Bash
+  ln -s ~/.vim/vimrc ~/.vimrc
+  ```
 
 
 ### Enable a plugin
