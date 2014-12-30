@@ -13,7 +13,7 @@ You can already do everything with Vim. Plugins can add new mapings to learn. Yo
 git clone git://github.com/jgueytat/dotvim.git ~/.vim
 ```
 
-**Get the plugins :**
+**Clone the submodules to get the plugins :**
 
 ```Bash
 cd ~/.vim &&
@@ -26,6 +26,23 @@ git submodule update
 ```Bash
 ln -s ~/.vim/vimrc ~/.vimrc
 ```
+
+
+### Enable a plugin
+
+**Create the link in plugins-enabled :**
+
+```Bash
+cd ~/.vim/plugins-enabled
+ln -s ../plugins-available/PLUGIN_NAME .
+```
+
+### Disable a plugin
+
+```Bash
+rm ~/.vim/plugins-enabled/PLUGIN_NAME
+```
+
 
 ### Update
 
@@ -73,22 +90,6 @@ git commit -m "The plugin ${PLUGIN_NAME_TO_REMOVE} has been removed."
 
 ```Bash
 rm -rf ~/.vim/plugins-available/${PLUGIN_NAME_TO_REMOVE}
-```
-
-
-### Enable a plugin
-
-**Create the link in plugins-enabled :**
-
-```Bash
-cd ~/.vim/plugins-enabled
-ln -s ../plugins-available/PLUGIN_NAME .
-```
-
-### Disable a plugin
-
-```Bash
-rm ~/.vim/plugins-enabled/PLUGIN_NAME
 ```
 
 ## Learn more about Vim
