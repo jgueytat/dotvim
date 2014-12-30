@@ -26,70 +26,94 @@ You can already do everything with Vim. Plugins can add new mapings to learn. Yo
   ln -s ~/.vim/vimrc ~/.vimrc
   ```
 
+### Enable / disable a plugin
 
-### Enable a plugin
+Don't forget to replace **{{PLUGIN_NAME}}**!!!
 
-**Create the link in plugins-enabled :**
+```Bash
+export PLUGIN_NAME={{PLUGIN_NAME}}
+```
+  
+#### Enable a plugin
+
+**Create the link in the directory plugins-enabled :**
 
 ```Bash
 cd ~/.vim/plugins-enabled
-ln -s ../plugins-available/PLUGIN_NAME .
+ln -s ../plugins-available/${PLUGIN_NAME} .
 ```
 
-### Disable a plugin
+#### Disable a plugin
+
+**Remove the link in the directory plugins-enabled :**
 
 ```Bash
-rm ~/.vim/plugins-enabled/PLUGIN_NAME
+rm ~/.vim/plugins-enabled/${PLUGIN_NAME}
 ```
 
 
 ### Update
 
-**Update your repository :**
+1. **Update your repository :**
 
-```Bash
-cd ~/.vim &&
-git pull origin master
-```
+  ```Bash
+  cd ~/.vim &&
+  git pull origin master
+  ```
 
-**Update all plugins :**
+2. **Update all plugins :**
 
-```Bash
-git submodule foreach git pull origin master
-```
+  ```Bash
+  git submodule foreach git pull origin master
+  ```
 
-### Add a plugin
+### Add/ remove  a plugin
 
-Don't forget to replace **GIT_URL_REPOSITORY** and **PLUGIN_NAME.**
-```Bash
-cd ~/.vim
-git submodule add GIT_URL_REPOSITORY plugins-available/PLUGIN_NAME
-git commit -m "The plugin PLUGIN_NAME has been added."
-```
+#### Add a plugin
+
+1. **Set the GIT_URL_REPOSITORY and PLUGIN_NAME variables :**
+
+  Don't forget to replace **{{GIT_URL_REPOSITORY}}** and **{{PLUGIN_NAME}}**!!!
+
+  ```Bash
+  export GIT_URL_REPOSITORY={{GIT_URL_REPOSITORY}} &&
+  export PLUGIN_NAME={{PLUGIN_NAME}}
+  ```
+2. **Add the plugin as a submodule :**
+
+  ```Bash
+  cd ~/.vim
+  git submodule add ${GIT_URL_REPOSITORY} plugins-available/${PLUGIN_NAME}
+  git commit -m "The plugin ${PLUGIN_NAME} has been added."
+  ```
 
 ### Remove a plugin
 
-**From Git :**
+1. **Set the PLUGIN_NAME variable :**
 
-```Bash
-export PLUGIN_NAME_TO_REMOVE=SET_PLUGIN_NAME_TO_REMOVE_HERE
-```
+  Don't forget to replace **{{PLUGIN_NAME}}**!!!
 
-```Bash
-cd ~/.vim &&
-mv .git/config .git/config-old; cat .git/config-old | grep -v ${PLUGIN_NAME_TO_REMOVE} > .git/config; rm .git/config-old &&
-mv .gitmodules .gitmodules-old; cat .gitmodules-old | grep -v ${PLUGIN_NAME_TO_REMOVE} > .gitmodules; rm .gitmodules-old &&
-git add .gitmodules &&
-git rm --cached plugins-available/${PLUGIN_NAME_TO_REMOVE} &&
-git rm plugins-enabled/${PLUGIN_NAME_TO_REMOVE} &&
-git commit -m "The plugin ${PLUGIN_NAME_TO_REMOVE} has been removed."
+  ```Bash
+  export PLUGIN_NAME={{PLUGIN_NAME}}
+  ```
+  
+2. **Remove the plugin from Git :**
 
-```
-**From FileSystem :**
+  ```Bash
+  cd ~/.vim &&
+  mv .git/config .git/config-old; cat .git/config-old | grep -v ${PLUGIN_NAME} > .git/config; rm .git/config-old &&
+  mv .gitmodules .gitmodules-old; cat .gitmodules-old | grep -v ${PLUGIN_NAME} > .gitmodules; rm .gitmodules-old &&
+  git add .gitmodules &&
+  git rm --cached plugins-available/${PLUGIN_NAME} &&
+  git rm plugins-enabled/${PLUGIN_NAME} &&
+  git commit -m "The plugin ${PLUGIN_NAME} has been removed."
+  ```
 
-```Bash
-rm -rf ~/.vim/plugins-available/${PLUGIN_NAME_TO_REMOVE}
-```
+3. **Remove the plugin from the file system :**
+
+  ```Bash
+  rm -rf ~/.vim/plugins-available/${PLUGIN_NAME}
+  ```
 
 ## Learn more about Vim
 
