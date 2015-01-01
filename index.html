@@ -35,7 +35,7 @@
 </h1>
 
 <p>This repository is the content of my <strong>.vim</strong> directory. Basically I'm only playing with existing plugins. I just add them as submodule and configure them in my <strong>.vimrc</strong> file.
-You can do already do everything with Vim. Plugins can add new mapings to learn. You should first ask if you can do an action without the plugin you're about to install.</p>
+You can already do everything with Vim. Plugins can add new mapings to learn. You should first ask if you can do an action without the plugin you're about to install.</p>
 
 <h2>
 <a id="play-with-the-vim-plugins" class="anchor" href="#play-with-the-vim-plugins" aria-hidden="true"><span class="octicon octicon-link"></span></a>Play with the Vim plugins</h2>
@@ -43,73 +43,117 @@ You can do already do everything with Vim. Plugins can add new mapings to learn.
 <h3>
 <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h3>
 
+<ol>
+<li>
 <p><strong>Clone the repository :</strong></p>
 
 <div class="highlight highlight-Bash"><pre>git clone git://github.com/jgueytat/dotvim.git <span class="pl-k">~</span>/.vim</pre></div>
-
-<p><strong>Get the plugins :</strong></p>
+</li>
+<li>
+<p><strong>Clone the submodules to get the plugins :</strong></p>
 
 <div class="highlight highlight-Bash"><pre><span class="pl-s3">cd</span> <span class="pl-k">~</span>/.vim <span class="pl-k">&amp;&amp;</span>
 git submodule init <span class="pl-k">&amp;&amp;</span>
 git submodule update</pre></div>
-
+</li>
+<li>
 <p><strong>Create symlinks :</strong></p>
 
 <div class="highlight highlight-Bash"><pre>ln -s <span class="pl-k">~</span>/.vim/vimrc <span class="pl-k">~</span>/.vimrc</pre></div>
+</li>
+</ol>
+
+<h3>
+<a id="enable--disable-a-plugin" class="anchor" href="#enable--disable-a-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Enable / disable a plugin</h3>
+
+<p>Don't forget to replace <strong>{{PLUGIN_NAME}}</strong>!!!</p>
+
+<div class="highlight highlight-Bash"><pre><span class="pl-s">export</span> PLUGIN_NAME={{PLUGIN_NAME}}</pre></div>
+
+<h4>
+<a id="enable-a-plugin" class="anchor" href="#enable-a-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Enable a plugin</h4>
+
+<p><strong>Create the link in the directory plugins-enabled :</strong></p>
+
+<div class="highlight highlight-Bash"><pre><span class="pl-s3">cd</span> <span class="pl-k">~</span>/.vim/plugins-enabled
+ln -s ../plugins-available/<span class="pl-vo">${PLUGIN_NAME}</span> <span class="pl-s3">.</span></pre></div>
+
+<h4>
+<a id="disable-a-plugin" class="anchor" href="#disable-a-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Disable a plugin</h4>
+
+<p><strong>Remove the link in the directory plugins-enabled :</strong></p>
+
+<div class="highlight highlight-Bash"><pre>rm <span class="pl-k">~</span>/.vim/plugins-enabled/<span class="pl-vo">${PLUGIN_NAME}</span></pre></div>
 
 <h3>
 <a id="update" class="anchor" href="#update" aria-hidden="true"><span class="octicon octicon-link"></span></a>Update</h3>
 
+<ol>
+<li>
 <p><strong>Update your repository :</strong></p>
 
 <div class="highlight highlight-Bash"><pre><span class="pl-s3">cd</span> <span class="pl-k">~</span>/.vim <span class="pl-k">&amp;&amp;</span>
 git pull origin master</pre></div>
-
+</li>
+<li>
 <p><strong>Update all plugins :</strong></p>
 
 <div class="highlight highlight-Bash"><pre>git submodule foreach git pull origin master</pre></div>
+</li>
+</ol>
 
 <h3>
-<a id="add-a-plugin" class="anchor" href="#add-a-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add a plugin</h3>
+<a id="add-remove--a-plugin" class="anchor" href="#add-remove--a-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add/ remove  a plugin</h3>
 
-<p>Don't forget to replace <strong>GIT_URL_REPOSITORY</strong> and <strong>PLUGIN_NAME.</strong></p>
+<h4>
+<a id="add-a-plugin" class="anchor" href="#add-a-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add a plugin</h4>
+
+<ol>
+<li>
+<p><strong>Set the GIT_URL_REPOSITORY and PLUGIN_NAME variables :</strong></p>
+
+<p>Don't forget to replace <strong>{{GIT_URL_REPOSITORY}}</strong> and <strong>{{PLUGIN_NAME}}</strong>!!!</p>
+
+<div class="highlight highlight-Bash"><pre><span class="pl-s">export</span> GIT_URL_REPOSITORY={{GIT_URL_REPOSITORY}} <span class="pl-k">&amp;&amp;</span>
+<span class="pl-s">export</span> PLUGIN_NAME={{PLUGIN_NAME}}</pre></div>
+</li>
+<li>
+<p><strong>Add the plugin as a submodule :</strong></p>
 
 <div class="highlight highlight-Bash"><pre><span class="pl-s3">cd</span> <span class="pl-k">~</span>/.vim
-git submodule add GIT_URL_REPOSITORY plugins-available/PLUGIN_NAME
-git commit -m <span class="pl-s1"><span class="pl-pds">"</span>The plugin PLUGIN_NAME has been added.<span class="pl-pds">"</span></span></pre></div>
+git submodule add <span class="pl-vo">${GIT_URL_REPOSITORY}</span> plugins-available/<span class="pl-vo">${PLUGIN_NAME}</span>
+git commit -m <span class="pl-s1"><span class="pl-pds">"</span>The plugin <span class="pl-vo">${PLUGIN_NAME}</span> has been added.<span class="pl-pds">"</span></span></pre></div>
+</li>
+</ol>
 
 <h3>
 <a id="remove-a-plugin" class="anchor" href="#remove-a-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Remove a plugin</h3>
 
-<p><strong>From Git :</strong></p>
+<ol>
+<li>
+<p><strong>Set the PLUGIN_NAME variable :</strong></p>
 
-<div class="highlight highlight-Bash"><pre><span class="pl-s">export</span> PLUGIN_NAME_TO_REMOVE=SET_PLUGIN_NAME_TO_REMOVE_HERE</pre></div>
+<p>Don't forget to replace <strong>{{PLUGIN_NAME}}</strong>!!!</p>
+
+<div class="highlight highlight-Bash"><pre><span class="pl-s">export</span> PLUGIN_NAME={{PLUGIN_NAME}}</pre></div>
+</li>
+<li>
+<p><strong>Remove the plugin from Git :</strong></p>
 
 <div class="highlight highlight-Bash"><pre><span class="pl-s3">cd</span> <span class="pl-k">~</span>/.vim <span class="pl-k">&amp;&amp;</span>
-mv .git/config .git/config-old<span class="pl-k">;</span> cat .git/config-old <span class="pl-k">|</span> grep -v <span class="pl-vo">${PLUGIN_NAME_TO_REMOVE}</span> <span class="pl-k">&gt;</span> .git/config<span class="pl-k">;</span> rm .git/config-old <span class="pl-k">&amp;&amp;</span>
-mv .gitmodules .gitmodules-old<span class="pl-k">;</span> cat .gitmodules-old <span class="pl-k">|</span> grep -v <span class="pl-vo">${PLUGIN_NAME_TO_REMOVE}</span> <span class="pl-k">&gt;</span> .gitmodules<span class="pl-k">;</span> rm .gitmodules-old <span class="pl-k">&amp;&amp;</span>
+mv .git/config .git/config-old<span class="pl-k">;</span> cat .git/config-old <span class="pl-k">|</span> grep -v <span class="pl-vo">${PLUGIN_NAME}</span> <span class="pl-k">&gt;</span> .git/config<span class="pl-k">;</span> rm .git/config-old <span class="pl-k">&amp;&amp;</span>
+mv .gitmodules .gitmodules-old<span class="pl-k">;</span> cat .gitmodules-old <span class="pl-k">|</span> grep -v <span class="pl-vo">${PLUGIN_NAME}</span> <span class="pl-k">&gt;</span> .gitmodules<span class="pl-k">;</span> rm .gitmodules-old <span class="pl-k">&amp;&amp;</span>
 git add .gitmodules <span class="pl-k">&amp;&amp;</span>
-git rm --cached plugins-available/<span class="pl-vo">${PLUGIN_NAME_TO_REMOVE}</span> <span class="pl-k">&amp;&amp;</span>
-git rm plugins-enabled/<span class="pl-vo">${PLUGIN_NAME_TO_REMOVE}</span> <span class="pl-k">&amp;&amp;</span>
-git commit -m <span class="pl-s1"><span class="pl-pds">"</span>The plugin <span class="pl-vo">${PLUGIN_NAME_TO_REMOVE}</span> has been removed.<span class="pl-pds">"</span></span>
-</pre></div>
+git rm --cached plugins-available/<span class="pl-vo">${PLUGIN_NAME}</span> <span class="pl-k">&amp;&amp;</span>
+git rm plugins-enabled/<span class="pl-vo">${PLUGIN_NAME}</span> <span class="pl-k">&amp;&amp;</span>
+git commit -m <span class="pl-s1"><span class="pl-pds">"</span>The plugin <span class="pl-vo">${PLUGIN_NAME}</span> has been removed.<span class="pl-pds">"</span></span></pre></div>
+</li>
+<li>
+<p><strong>Remove the plugin from the file system :</strong></p>
 
-<p><strong>From FileSystem :</strong></p>
-
-<div class="highlight highlight-Bash"><pre>rm -rf <span class="pl-k">~</span>/.vim/plugins-available/<span class="pl-vo">${PLUGIN_NAME_TO_REMOVE}</span></pre></div>
-
-<h3>
-<a id="enable-a-plugin" class="anchor" href="#enable-a-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Enable a plugin</h3>
-
-<p><strong>Create the link in plugins-enabled :</strong></p>
-
-<div class="highlight highlight-Bash"><pre><span class="pl-s3">cd</span> <span class="pl-k">~</span>/.vim/plugins-enabled
-ln -s ../plugins-available/PLUGIN_NAME <span class="pl-s3">.</span></pre></div>
-
-<h3>
-<a id="disable-a-plugin" class="anchor" href="#disable-a-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Disable a plugin</h3>
-
-<div class="highlight highlight-Bash"><pre>rm <span class="pl-k">~</span>/.vim/plugins-enabled/PLUGIN_NAME</pre></div>
+<div class="highlight highlight-Bash"><pre>rm -rf <span class="pl-k">~</span>/.vim/plugins-available/<span class="pl-vo">${PLUGIN_NAME}</span></pre></div>
+</li>
+</ol>
 
 <h2>
 <a id="learn-more-about-vim" class="anchor" href="#learn-more-about-vim" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn more about Vim</h2>
