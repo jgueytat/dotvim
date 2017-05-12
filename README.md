@@ -140,3 +140,9 @@ rm ~/.vim/plugins-enabled/${PLUGIN_NAME}
     + [Vimcasts.org](http://vimcasts.org/): A few short screencasts to love Vim!
     + [VimGolf](http://vimgolf.com/): "Real Vim ninjas count every keystroke - do you?" Learn Vim by playing!
     + [Official documentation](http://vimdoc.sourceforge.net/htmldoc/): This should be the equivalent of :help
+
+* **Plugins to try out :**
+
+    + https://github.com/Valloric/YouCompleteMe
+    + https://github.com/vim-syntastic/syntastic
+
