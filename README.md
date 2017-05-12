@@ -145,4 +145,5 @@ rm ~/.vim/plugins-enabled/${PLUGIN_NAME}
 
     + https://github.com/Valloric/YouCompleteMe
     + https://github.com/vim-syntastic/syntastic
+    + https://github.com/airblade/vim-gitgutter
 
